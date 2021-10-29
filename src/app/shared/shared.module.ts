@@ -6,6 +6,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarItemComponent } from './sidebar/sidebar-item/sidebar-item.component';
 import { HeroComponent } from './hero/hero.component';
 import { annotation, HeroIconsModule } from 'ng-heroicons';
+import { CoreModule } from '../core/core.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,11 @@ import { annotation, HeroIconsModule } from 'ng-heroicons';
     SidebarItemComponent,
     HeroComponent,
   ],
-  imports: [CommonModule, HeroIconsModule.withIcons({ annotation })],
+  imports: [
+    CommonModule,
+    HeroIconsModule.withIcons({ annotation }),
+    CoreModule,
+  ],
   exports: [HeaderComponent, SidebarComponent],
 })
 export class SharedModule {}
