@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { HeroIconName } from 'ng-heroicons';
-import { ListItemModel } from '../sidebar-item/sidebar-item.model';
+import { ListItemModel } from '../sidebar-item.model';
 
 @Component({
   selector: 'app-sidebar-item',
@@ -15,7 +15,7 @@ export class SidebarItemComponent implements OnInit {
     fillIcon: 'star-solid',
     text: 'text',
     badge: '11',
-    expandable: false,
+    subItems: undefined,
   };
   icon: HeroIconName = 'star';
   currentIconFill = false;

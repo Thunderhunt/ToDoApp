@@ -7,5 +7,5 @@ export interface ListItemModel {
   fillIcon: HeroIconName;
   text: string;
   badge: string;
-  expandable: boolean;
+  subItems: ListItemModel | undefined;
 }

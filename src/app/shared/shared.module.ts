@@ -16,6 +16,7 @@ import {
   home,
   homeSolid,
 } from 'ng-heroicons';
+import { SidebarService } from './sidebar/sidebar.service';
 
 @NgModule({
   declarations: [SidebarComponent, SidebarItemComponent, HeroComponent],
@@ -35,5 +36,6 @@ import {
     }),
   ],
   exports: [SidebarComponent],
+  providers: [SidebarService],
 })
 export class SharedModule {}
