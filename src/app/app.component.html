@@ -1,4 +1,4 @@
-<div class="grid-cols-12 grid w-screen h-screen">
+<div class="grid-cols-12 box-border grid w-screen h-screen">
   <app-sidebar
     class="
       col-span-12
@@ -6,10 +6,13 @@
       block
       h-full
       shadow-xl
-      sticky
       dark:bg-gray-800
       bg-white
     "
   ></app-sidebar>
-  <main class="h-full col-span-12 hidden md:block md:col-span-9 p-4"></main>
+  <main
+    class="h-full hidden md:block col-span-12 md:col-span-9 overflow-hidden"
+  >
+    <app-content-pane></app-content-pane>
+  </main>
 </div>
