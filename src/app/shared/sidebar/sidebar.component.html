@@ -1,12 +1,9 @@
 <app-hero classes="w-2/3 mt-4 m-auto"></app-hero>
-<ul class="inline-block w-full mt-4">
-  <app-sidebar-item>Item 1</app-sidebar-item>
+<ul class="block w-full mt-4">
+  <app-sidebar-item *ngFor="let item of content" [listItem]="item"
+    >{{item.text}}</app-sidebar-item
+  >
 
-  <app-sidebar-item>Item 1</app-sidebar-item>
-
-  <app-sidebar-item>Item 1</app-sidebar-item>
-
-  <app-sidebar-item>Item 1</app-sidebar-item>
   <app-divider></app-divider>
   <app-sidebar-item>Item 1</app-sidebar-item>
 

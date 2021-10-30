@@ -1,5 +1,18 @@
-<!-- <app-header></app-header>  -->
-
-<app-sidebar
-  class="md:w-56  hidden md:block h-full shadow-xl fixed dark:bg-gray-800 bg-white"
-></app-sidebar>
+<div class="grid-cols-12 box-border grid w-screen h-screen">
+  <app-sidebar
+    class="
+      col-span-12
+      md:col-span-3
+      block
+      h-full
+      shadow-xl
+      dark:bg-gray-800
+      bg-white
+    "
+  ></app-sidebar>
+  <main
+    class="h-full hidden md:block col-span-12 md:col-span-9 overflow-hidden"
+  >
+    <app-content-pane></app-content-pane>
+  </main>
+</div>
