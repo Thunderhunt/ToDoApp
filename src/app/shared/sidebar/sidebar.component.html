@@ -1,13 +1,20 @@
-<app-hero classes="w-2/3 mt-4 m-auto"></app-hero>
-<ul class="block w-full mt-4">
-  <app-sidebar-item *ngFor="let item of mainMenu" [listItem]="item">{{
-    item.text
-  }}</app-sidebar-item>
+<div class="h-screen flex flex-col overflow-hidden">
+  <app-hero classes="w-2/3 mt-4 m-auto flex"></app-hero>
 
-  <app-divider></app-divider>
-  <app-sidebar-item *ngFor="let listItem of userLists" [listItem]="listItem">{{
-    listItem.text
-  }}</app-sidebar-item>
+  <ul class="block flex-1 w-full h-screen mt-4 overflow-y-scroll">
+    <app-sidebar-item *ngFor="let item of mainMenu" [listItem]="item">{{
+      item.text
+    }}</app-sidebar-item>
 
-  <app-sidebar-collapsable-item></app-sidebar-collapsable-item>
-</ul>
+    <app-divider></app-divider>
+    <app-sidebar-item
+      *ngFor="let listItem of userLists"
+      [listItem]="listItem"
+      >{{ listItem.text }}</app-sidebar-item
+    >
+
+    <app-sidebar-collapsable-item></app-sidebar-collapsable-item>
+  </ul>
+
+  <app-sidebar-search-bar class="w-full"></app-sidebar-search-bar>
+</div>
