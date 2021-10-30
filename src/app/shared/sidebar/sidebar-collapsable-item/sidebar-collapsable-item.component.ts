@@ -25,6 +25,24 @@ export class SidebarCollapsableItemComponent implements OnInit {
         badge: '11',
         subItems: undefined,
       },
+      {
+        color: 'yellow',
+        shade: '500',
+        icon: 'star',
+        fillIcon: 'star-solid',
+        text: 'List 1',
+        badge: '11',
+        subItems: undefined,
+      },
+      {
+        color: 'yellow',
+        shade: '500',
+        icon: 'star',
+        fillIcon: 'star-solid',
+        text: 'List 1',
+        badge: '11',
+        subItems: undefined,
+      },
     ],
   };
   collapsed: string = 'block';
