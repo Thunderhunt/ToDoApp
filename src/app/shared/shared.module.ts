@@ -20,6 +20,7 @@ import {
 } from 'ng-heroicons';
 import { SidebarService } from './sidebar/sidebar.service';
 import { SidebarCollapsableItemComponent } from './sidebar/sidebar-collapsable-item/sidebar-collapsable-item.component';
+import { SidebarGroupItemComponent } from './sidebar/sidebar-group-item/sidebar-group-item.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { SidebarCollapsableItemComponent } from './sidebar/sidebar-collapsable-i
     SidebarItemComponent,
     HeroComponent,
     SidebarCollapsableItemComponent,
+    SidebarGroupItemComponent,
   ],
   imports: [
     CommonModule,
