@@ -1,12 +1,26 @@
-<li
+<div
   class="
-    text-center
-    w-full
-    p-2
-    hover:bg-gray-400 hover:text-black hover:bg-opacity-20
-    dark:hover:bg-gray-200 dark:hover:text-white dark:hover:bg-opacity-20
+    flex
+    justify-between
+    items-center
     cursor-pointer
+    hover:bg-opacity-20 hover:bg-gray-400
   "
+  (mouseover)="toggleIconState()"
+  (mouseout)="toggleIconState()"
+  [ngClass]="hoverColor"
 >
-  <ng-content></ng-content>
-</li>
+  <div class="flex justify-start items-center">
+    <hero-icon
+      class="ml-8 mr-4"
+      [ngClass]="iconColor"
+      [name]="icon"
+      size="24px"
+    ></hero-icon>
+
+    <li class="p-2">
+      <ng-content></ng-content>
+    </li>
+  </div>
+  <p class="mr-2 text-gray-500">{{ listItem.badge }}</p>
+</div>
