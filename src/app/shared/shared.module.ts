@@ -17,6 +17,10 @@ import {
   homeSolid,
   viewList,
   viewListSolid,
+  documentAdd,
+  documentAddSolid,
+  dotsVertical,
+  dotsVerticalSolid,
 } from 'ng-heroicons';
 import { SidebarService } from './sidebar/sidebar.service';
 import { SidebarCollapsableItemComponent } from './sidebar/sidebar-collapsable-item/sidebar-collapsable-item.component';
@@ -47,6 +51,10 @@ import { SidebarSearchBarComponent } from './sidebar/sidebar-search-bar/sidebar-
       homeSolid,
       viewList,
       viewListSolid,
+      documentAdd,
+      documentAddSolid,
+      dotsVertical,
+      dotsVerticalSolid,
     }),
   ],
   exports: [SidebarComponent],
