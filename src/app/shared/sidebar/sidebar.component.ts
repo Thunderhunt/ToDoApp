@@ -9,8 +9,10 @@ import { SidebarService } from './sidebar.service';
 export class SidebarComponent implements OnInit {
   @Input() collapsed: boolean = false;
   mainMenu: ListItemModel[];
+  userLists: ListItemModel[];
   constructor(sidebarService: SidebarService) {
-    this.mainMenu = sidebarService.getMainMenuContent();
+    this.mainMenu = sidebarService.getMainMenuItems();
+    this.userLists = sidebarService.getUserListsItems();
   }
 
   ngOnInit(): void {}

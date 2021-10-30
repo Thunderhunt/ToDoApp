@@ -5,9 +5,9 @@
   }}</app-sidebar-item>
 
   <app-divider></app-divider>
-  <app-sidebar-item>Item 1</app-sidebar-item>
+  <app-sidebar-item *ngFor="let listItem of userLists" [listItem]="listItem">{{
+    listItem.text
+  }}</app-sidebar-item>
 
-  <app-sidebar-item>Item 1</app-sidebar-item>
-
-  <app-sidebar-item>Item 1</app-sidebar-item>
+  <app-sidebar-collapsable-item></app-sidebar-collapsable-item>
 </ul>

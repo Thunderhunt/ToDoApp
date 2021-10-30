@@ -15,11 +15,19 @@ import {
   userSolid,
   home,
   homeSolid,
+  viewList,
+  viewListSolid,
 } from 'ng-heroicons';
 import { SidebarService } from './sidebar/sidebar.service';
+import { SidebarCollapsableItemComponent } from './sidebar/sidebar-collapsable-item/sidebar-collapsable-item.component';
 
 @NgModule({
-  declarations: [SidebarComponent, SidebarItemComponent, HeroComponent],
+  declarations: [
+    SidebarComponent,
+    SidebarItemComponent,
+    HeroComponent,
+    SidebarCollapsableItemComponent,
+  ],
   imports: [
     CommonModule,
     CoreModule,
@@ -33,6 +41,8 @@ import { SidebarService } from './sidebar/sidebar.service';
       userSolid,
       home,
       homeSolid,
+      viewList,
+      viewListSolid,
     }),
   ],
   exports: [SidebarComponent],

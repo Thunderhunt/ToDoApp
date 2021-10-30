@@ -51,9 +51,68 @@ export class SidebarService {
     },
   ];
 
+  userLists: ListItemModel[] = [
+    {
+      color: 'yellow',
+      shade: '500',
+      icon: 'view-list',
+      fillIcon: 'view-list-solid',
+      text: 'List 1',
+      badge: '11',
+      subItems: undefined,
+    },
+    {
+      color: 'purple',
+      shade: '500',
+      icon: 'view-list',
+      fillIcon: 'view-list-solid',
+      text: 'List 2',
+      badge: '11',
+      subItems: undefined,
+    },
+  ];
+
+  userGroups: ListItemModel[] = [
+    {
+      color: 'yellow',
+      shade: '500',
+      icon: 'view-list',
+      fillIcon: 'view-list-solid',
+      text: 'List 1',
+      badge: '11',
+      subItems: [
+        {
+          color: 'yellow',
+          shade: '500',
+          icon: 'view-list',
+          fillIcon: 'view-list-solid',
+          text: 'List 1',
+          badge: '11',
+          subItems: undefined,
+        },
+        {
+          color: 'yellow',
+          shade: '500',
+          icon: 'view-list',
+          fillIcon: 'view-list-solid',
+          text: 'List 1',
+          badge: '11',
+          subItems: undefined,
+        },
+      ],
+    },
+  ];
+
   constructor() {}
 
-  getMainMenuContent(): ListItemModel[] {
+  getMainMenuItems(): ListItemModel[] {
     return this.mainMenu;
+  }
+
+  getUserListsItems(): ListItemModel[] {
+    return this.userLists;
+  }
+  getUserGroupsItems(): ListItemModel[] {
+    return this.userGroups;
   }
 }
