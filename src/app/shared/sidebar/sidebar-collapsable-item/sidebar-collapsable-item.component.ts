@@ -49,17 +49,12 @@ export class SidebarCollapsableItemComponent implements OnInit {
       },
     ],
   };
-  collapsed: string = 'block';
+
   isCollapsed: boolean = false;
   constructor() {}
 
   ngOnInit(): void {}
   collapseChange() {
-    if (this.isCollapsed) {
-      this.collapsed = 'hidden';
-    } else {
-      this.collapsed = 'block';
-    }
     this.isCollapsed = !this.isCollapsed;
   }
 }
