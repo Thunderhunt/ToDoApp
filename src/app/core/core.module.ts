@@ -10,9 +10,15 @@ import {
 import { DividerComponent } from './components/divider/divider.component';
 import { ListItemComponent } from './components/list-item/list-item.component';
 import { DropDownMenuComponent } from './components/drop-down-menu/drop-down-menu.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
-  declarations: [DividerComponent, ListItemComponent, DropDownMenuComponent],
+  declarations: [
+    DividerComponent,
+    ListItemComponent,
+    DropDownMenuComponent,
+    CardComponent,
+  ],
   imports: [
     CommonModule,
     HeroIconsModule.withIcons({
@@ -22,6 +28,11 @@ import { DropDownMenuComponent } from './components/drop-down-menu/drop-down-men
       checkCircleSolid,
     }),
   ],
-  exports: [DividerComponent, ListItemComponent, DropDownMenuComponent],
+  exports: [
+    DividerComponent,
+    ListItemComponent,
+    DropDownMenuComponent,
+    CardComponent,
+  ],
 })
 export class CoreModule {}
