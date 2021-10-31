@@ -1,10 +1,14 @@
 <div class="flex justify-start items-center">
   <hero-icon class="mx-2" name="document-add" size="24px"></hero-icon>
+
   <input
     type="text"
     placeholder="New List"
+    (keydown.enter)="addNewList()"
+    [(ngModel)]="inputText"
     class="bg-transparent py-2 w-full flex-1 outline-none"
   />
+
   <div *ngIf="options" class="relative z-30 w-40 shadow-md transition">
     <ul
       class="

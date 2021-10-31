@@ -5,6 +5,8 @@ import { ListItemModel } from './sidebar-item.model';
 @Injectable()
 export class SidebarService {
   currentSelectedItem: Subject<string> = new Subject();
+  colorPallete: string[] = ['yellow', 'purple', 'green', 'blue', 'indigo'];
+  shadePallete: string[] = ['400', '500', '600', '700', '800'];
   mainMenu: ListItemModel[] = [
     {
       id: 'uiui132uiui13ui0900',
@@ -48,106 +50,6 @@ export class SidebarService {
     },
     {
       id: 'ui5662uiui13ui13iu',
-      color: 'indigo',
-      shade: '500',
-      icon: 'home',
-      fillIcon: 'home-solid',
-      text: 'Tasks',
-      badge: '11',
-      subItems: undefined,
-    },
-    {
-      id: 'ui565656iui13ui13iu',
-      color: 'yellow',
-      shade: '500',
-      icon: 'sun',
-      fillIcon: 'sun-solid',
-      text: 'My Day',
-      badge: '11',
-      subItems: undefined,
-    },
-    {
-      id: '8989ui132uiui13ui13iu',
-      color: 'purple',
-      shade: '500',
-      icon: 'star',
-      fillIcon: 'star-solid',
-      text: 'Important',
-      badge: '11',
-      subItems: undefined,
-    },
-    {
-      id: 'uiui132uiui13uiaasads',
-      color: 'green',
-      shade: '500',
-      icon: 'calendar',
-      fillIcon: 'calendar-solid',
-      text: 'Planned',
-      badge: '11',
-      subItems: undefined,
-    },
-    {
-      id: 'uiui132131232sad13ui13iu',
-      color: 'blue',
-      shade: '500',
-      icon: 'user',
-      fillIcon: 'user-solid',
-      text: 'Assigned to you',
-      badge: '11',
-      subItems: undefined,
-    },
-    {
-      id: 'uiui132uiui1343535u',
-      color: 'indigo',
-      shade: '500',
-      icon: 'home',
-      fillIcon: 'home-solid',
-      text: 'Tasks',
-      badge: '11',
-      subItems: undefined,
-    },
-    {
-      id: 'uiui132uiui135677asda',
-      color: 'yellow',
-      shade: '500',
-      icon: 'sun',
-      fillIcon: 'sun-solid',
-      text: 'My Day',
-      badge: '11',
-      subItems: undefined,
-    },
-    {
-      id: 'uiui1322342d13ui13iu',
-      color: 'purple',
-      shade: '500',
-      icon: 'star',
-      fillIcon: 'star-solid',
-      text: 'Important',
-      badge: '11',
-      subItems: undefined,
-    },
-    {
-      id: 'uiui23423iui13ui13iu',
-      color: 'green',
-      shade: '500',
-      icon: 'calendar',
-      fillIcon: 'calendar-solid',
-      text: 'Planned',
-      badge: '11',
-      subItems: undefined,
-    },
-    {
-      id: 'uiui1324sdfiui13ui13iu',
-      color: 'blue',
-      shade: '500',
-      icon: 'user',
-      fillIcon: 'user-solid',
-      text: 'Assigned to you',
-      badge: '11',
-      subItems: undefined,
-    },
-    {
-      id: 'uiui132656iui13ui13iu',
       color: 'indigo',
       shade: '500',
       icon: 'home',
@@ -229,5 +131,36 @@ export class SidebarService {
   }
   changeSelectedIndex(id: string) {
     this.currentSelectedItem.next(id);
+  }
+
+  addUserList(name: string) {
+    let newList: ListItemModel = {
+      id: this.createUUID(),
+      badge: '',
+      color: this.getRandomElementOfArray(this.colorPallete),
+      shade: this.getRandomElementOfArray(this.shadePallete),
+      icon: 'view-list',
+      fillIcon: 'view-list-solid',
+      text: name,
+      subItems: undefined,
+    };
+
+    this.userLists.push(newList);
+  }
+
+  createUUID() {
+    var dt = new Date().getTime();
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(
+      /[xy]/g,
+      function (c) {
+        var r = (dt + Math.random() * 16) % 16 | 0;
+        dt = Math.floor(dt / 16);
+        return (c == 'x' ? r : (r & 0x3) | 0x8).toString(16);
+      }
+    );
+  }
+  getRandomElementOfArray(array: Array<any>) {
+    let index = Math.floor(Math.random() * array.length);
+    return array[index];
   }
 }

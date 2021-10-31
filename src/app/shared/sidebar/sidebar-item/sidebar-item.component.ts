@@ -1,3 +1,4 @@
+import { transition, trigger, useAnimation } from '@angular/animations';
 import {
   Component,
   Input,
@@ -8,6 +9,7 @@ import {
 } from '@angular/core';
 import { HeroIconName } from 'ng-heroicons';
 import { Subscription } from 'rxjs';
+import { transitionAnimation } from 'src/app/core/animations/swipe-right-insert-remove.animation';
 import { ListItemModel } from '../sidebar-item.model';
 import { SidebarService } from '../sidebar.service';
 
@@ -15,6 +17,19 @@ import { SidebarService } from '../sidebar.service';
   selector: 'app-sidebar-item',
   templateUrl: './sidebar-item.component.html',
   styleUrls: ['./sidebar-item.component.scss'],
+  animations: [
+    trigger('myInsertRemoveTrigger', [
+      transition(':enter', [
+        useAnimation(transitionAnimation, {
+          params: {
+            initialTransformState: 'translate(-350px, 0px)',
+            duration: '200ms',
+            finalTransformState: 'translate(0px, 0px)',
+          },
+        }),
+      ]),
+    ]),
+  ],
 })
 export class SidebarItemComponent implements OnInit, OnDestroy {
   @Input() selected: boolean = false;
