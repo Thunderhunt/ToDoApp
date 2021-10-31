@@ -2,7 +2,11 @@
   <app-sidebar-group-item [listItem]="userGroup">
     {{ userGroup.text }}</app-sidebar-group-item
   >
-  <div *ngIf="!isCollapsed" class="ml-11 border-l-2 border-gray-600">
+  <div
+    *ngIf="!isCollapsed"
+    @myInsertRemoveTrigger
+    class="ml-11 border-l-2 border-gray-600"
+  >
     <app-sidebar-item
       *ngFor="let listItem of userGroup.subItems"
       [listItem]="listItem"

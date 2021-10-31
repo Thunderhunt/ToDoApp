@@ -1,11 +1,41 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ListItemModel } from '../sidebar-item.model';
-import { SidebarService } from '../sidebar.service';
-
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  useAnimation,
+  // ...
+} from '@angular/animations';
+import { transitionAnimation } from 'src/app/core/animations/swipe-right-insert-remove.animation';
 @Component({
   selector: 'app-sidebar-collapsable-item',
   templateUrl: './sidebar-collapsable-item.component.html',
   styleUrls: ['./sidebar-collapsable-item.component.scss'],
+  animations: [
+    trigger('myInsertRemoveTrigger', [
+      transition(':enter', [
+        useAnimation(transitionAnimation, {
+          params: {
+            initialTransformState: 'translate(-350px, 0px)',
+            duration: '200ms',
+            finalTransformState: 'translate(0px, 0px)',
+          },
+        }),
+      ]),
+      transition(':leave', [
+        useAnimation(transitionAnimation, {
+          params: {
+            initialTransformState: 'translate(0px, 0px)',
+            duration: '200ms',
+            finalTransformState: 'translate(-350px, 0px)',
+          },
+        }),
+      ]),
+    ]),
+  ],
 })
 export class SidebarCollapsableItemComponent implements OnInit {
   @Input() userGroup: ListItemModel = {
