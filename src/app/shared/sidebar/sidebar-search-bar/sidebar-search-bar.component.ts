@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar-search-bar',
   templateUrl: './sidebar-search-bar.component.html',
-  styleUrls: ['./sidebar-search-bar.component.scss']
+  styleUrls: ['./sidebar-search-bar.component.scss'],
 })
 export class SidebarSearchBarComponent implements OnInit {
+  options: boolean = true;
+  @Input() optionsContent: string[] = [];
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  changeOptions() {
+    this.options = !this.options;
   }
-
 }
