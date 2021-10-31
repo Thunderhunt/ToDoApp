@@ -1,15 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ListItemModel } from '../sidebar-item.model';
 import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-  useAnimation,
-  // ...
+  transition, trigger, useAnimation
 } from '@angular/animations';
+import { Component, Input, OnInit } from '@angular/core';
 import { transitionAnimation } from 'src/app/core/animations/swipe-right-insert-remove.animation';
+import { ListItemModel } from '../sidebar-item.model';
 @Component({
   selector: 'app-sidebar-collapsable-item',
   templateUrl: './sidebar-collapsable-item.component.html',
@@ -46,42 +40,13 @@ export class SidebarCollapsableItemComponent implements OnInit {
     fillIcon: 'star-solid',
     text: 'Group 1',
     badge: '11',
-    subItems: [
-      {
-        id: 'uiui132uiui1345433iu',
-        color: 'yellow',
-        shade: '500',
-        icon: 'star',
-        fillIcon: 'star-solid',
-        text: 'List 1',
-        badge: '11',
-        subItems: undefined,
-      },
-      {
-        id: 'uiui132uiu234ui13iu',
-        color: 'yellow',
-        shade: '500',
-        icon: 'star',
-        fillIcon: 'star-solid',
-        text: 'List 1',
-        badge: '11',
-        subItems: undefined,
-      },
-      {
-        id: 'uiui132uiui13ui23131u',
-        color: 'yellow',
-        shade: '500',
-        icon: 'star',
-        fillIcon: 'star-solid',
-        text: 'List 1',
-        badge: '11',
-        subItems: undefined,
-      },
-    ],
+    subItems: undefined,
   };
 
   isCollapsed: boolean = false;
-  constructor() {}
+  constructor() {
+   
+  }
 
   ngOnInit(): void {}
   collapseChange() {

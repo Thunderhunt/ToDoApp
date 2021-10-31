@@ -19,10 +19,12 @@ export class SidebarComponent implements OnInit {
 
   mainMenu: ListItemModel[];
   userLists: ListItemModel[];
+  userGroups: ListItemModel[];
   selectedItem: string = '';
   constructor(public sidebarService: SidebarService) {
     this.mainMenu = sidebarService.getMainMenuItems();
     this.userLists = sidebarService.getUserListsItems();
+    this.userGroups = sidebarService.getUserGroupsItems();
   }
 
   ngOnInit(): void {}

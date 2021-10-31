@@ -88,8 +88,8 @@ export class SidebarService {
       id: 'uiui1324sd4543ui13iu',
       color: 'yellow',
       shade: '500',
-      icon: 'view-list',
-      fillIcon: 'view-list-solid',
+      icon: 'collection',
+      fillIcon: 'collection-solid',
       text: 'List 1',
       badge: '11',
       subItems: [
