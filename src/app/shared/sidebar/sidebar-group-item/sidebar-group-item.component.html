@@ -5,13 +5,10 @@
     items-center
     cursor-pointer
     hover:bg-opacity-20 hover:bg-gray-400
-    transition-all
-    duration-500
   "
   (mouseover)="toggleIconState()"
   (mouseout)="toggleIconState()"
-  (click)="selectChange()"
-  [ngClass]="{ hoverColor: true, 'item-selected': selected }"
+  [ngClass]="hoverColor"
 >
   <div class="flex justify-start items-center">
     <hero-icon

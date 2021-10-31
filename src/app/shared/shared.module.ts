@@ -15,11 +15,27 @@ import {
   userSolid,
   home,
   homeSolid,
+  viewList,
+  viewListSolid,
+  documentAdd,
+  documentAddSolid,
+  dotsVertical,
+  dotsVerticalSolid,
 } from 'ng-heroicons';
 import { SidebarService } from './sidebar/sidebar.service';
+import { SidebarCollapsableItemComponent } from './sidebar/sidebar-collapsable-item/sidebar-collapsable-item.component';
+import { SidebarGroupItemComponent } from './sidebar/sidebar-group-item/sidebar-group-item.component';
+import { SidebarSearchBarComponent } from './sidebar/sidebar-search-bar/sidebar-search-bar.component';
 
 @NgModule({
-  declarations: [SidebarComponent, SidebarItemComponent, HeroComponent],
+  declarations: [
+    SidebarComponent,
+    SidebarItemComponent,
+    HeroComponent,
+    SidebarCollapsableItemComponent,
+    SidebarGroupItemComponent,
+    SidebarSearchBarComponent,
+  ],
   imports: [
     CommonModule,
     CoreModule,
@@ -33,6 +49,12 @@ import { SidebarService } from './sidebar/sidebar.service';
       userSolid,
       home,
       homeSolid,
+      viewList,
+      viewListSolid,
+      documentAdd,
+      documentAddSolid,
+      dotsVertical,
+      dotsVerticalSolid,
     }),
   ],
   exports: [SidebarComponent],

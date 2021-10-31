@@ -1,14 +1,25 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnDestroy,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 import { HeroIconName } from 'ng-heroicons';
+import { Subscription } from 'rxjs';
 import { ListItemModel } from '../sidebar-item.model';
+import { SidebarService } from '../sidebar.service';
 
 @Component({
   selector: 'app-sidebar-item',
   templateUrl: './sidebar-item.component.html',
   styleUrls: ['./sidebar-item.component.scss'],
 })
-export class SidebarItemComponent implements OnInit {
+export class SidebarItemComponent implements OnInit, OnDestroy {
+  @Input() selected: boolean = false;
   @Input() listItem: ListItemModel = {
+    id: 'uiui1324sdfiui13ui2342u',
     color: '',
     shade: '',
     icon: 'star',
@@ -17,13 +28,20 @@ export class SidebarItemComponent implements OnInit {
     badge: '11',
     subItems: undefined,
   };
+  subscription: Subscription;
   icon: HeroIconName = 'star';
   currentIconFill = false;
   hoverColor: string = '';
   iconColor: string = '';
-  constructor() {
+  selectedColor: string = '';
+  constructor(private sidebarService: SidebarService) {
     this.iconColor = 'text-' + this.listItem.color + '-' + this.listItem.shade;
+    this.selectedColor = 'border-' + this.listItem.color + '-400';
+    this.subscription = sidebarService.currentSelectedItem.subscribe((id) => {
+      this.selected = id === this.listItem.id;
+    });
   }
+
   toggleIconState() {
     if (this.currentIconFill) this.icon = this.listItem.icon;
     else this.icon = this.listItem.fillIcon;
@@ -32,5 +50,11 @@ export class SidebarItemComponent implements OnInit {
   ngOnInit(): void {
     this.iconColor = 'text-' + this.listItem.color + '-' + this.listItem.shade;
     this.icon = this.listItem.icon;
+  }
+  selectChange() {
+    this.sidebarService.changeSelectedIndex(this.listItem.id);
+  }
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 }

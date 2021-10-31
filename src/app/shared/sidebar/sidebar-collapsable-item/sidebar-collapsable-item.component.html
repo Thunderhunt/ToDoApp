@@ -1,0 +1,14 @@
+<div (click)="collapseChange()">
+  <app-sidebar-group-item [listItem]="userGroup">
+    {{ userGroup.text }}</app-sidebar-group-item
+  >
+  <div class="ml-11 border-l-2 border-gray-600">
+    <app-sidebar-item
+      *ngFor="let listItem of userGroup.subItems"
+      [listItem]="listItem"
+      [ngClass]="collapsed"
+    >
+      {{ listItem.text }}
+    </app-sidebar-item>
+  </div>
+</div>

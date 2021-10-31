@@ -3,15 +3,18 @@
     class="
       col-span-12
       md:col-span-3
+      transition-all
       block
-      h-full
-      shadow-xl
+      duration-500
+      h-auto
+      shadow-2xl
+      z-20
       dark:bg-gray-800
-      bg-white
+      bg-gray-300 bg-opacity-30
     "
   ></app-sidebar>
   <main
-    class="h-full hidden md:block col-span-12 md:col-span-9 overflow-hidden"
+    class="h-auto hidden md:block col-span-12 md:col-span-9 overflow-hidden"
   >
     <app-content-pane></app-content-pane>
   </main>

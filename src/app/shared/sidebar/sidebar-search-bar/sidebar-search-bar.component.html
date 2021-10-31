@@ -1,0 +1,45 @@
+<div class="flex justify-start items-center">
+  <hero-icon class="mx-2" name="document-add" size="24px"></hero-icon>
+  <input
+    type="text"
+    placeholder="New List"
+    class="bg-transparent py-2 w-full flex-1 outline-none"
+  />
+  <div *ngIf="options" class="relative z-30 w-40 shadow-md transition">
+    <ul
+      class="
+        absolute
+        -top-20
+        h-20
+        w-full
+        border-0
+        bg-green-200
+        dark:bg-gray-700
+        py-1
+        overflow-y-auto
+        rounded
+      "
+    >
+      <li
+        class="
+          hover:bg-green-400
+          dark:hover:bg-gray-800
+          transition-all
+          duration-500
+          cursor-pointer
+          px-4
+        "
+        *ngFor="let option of optionsContent"
+      >
+        {{ option }}
+      </li>
+    </ul>
+  </div>
+
+  <hero-icon
+    class="mx-2 cursor-pointer"
+    (click)="changeOptions()"
+    name="dots-vertical"
+    size="24px"
+  ></hero-icon>
+</div>
