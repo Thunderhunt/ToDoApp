@@ -5,7 +5,7 @@
     placeholder="New List"
     class="bg-transparent py-2 w-full flex-1 outline-none"
   />
-  <div *ngIf="options" class="relative z-30 w-40 shadow-md">
+  <div *ngIf="options" class="relative z-30 w-40 shadow-md transition">
     <ul
       class="
         absolute
@@ -21,7 +21,14 @@
       "
     >
       <li
-        class="hover:bg-green-400 dark:hover:bg-gray-800 cursor-pointer px-4"
+        class="
+          hover:bg-green-400
+          dark:hover:bg-gray-800
+          transition-all
+          duration-500
+          cursor-pointer
+          px-4
+        "
         *ngFor="let option of optionsContent"
       >
         {{ option }}
