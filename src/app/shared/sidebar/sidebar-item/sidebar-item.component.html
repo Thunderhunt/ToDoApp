@@ -10,7 +10,8 @@
   "
   (mouseover)="toggleIconState()"
   (mouseout)="toggleIconState()"
-  [ngClass]="hoverColor"
+  (click)="selectChange()"
+  [ngClass]="{ hoverColor: true, 'item-selected': selected }"
 >
   <div class="flex justify-start items-center">
     <hero-icon
