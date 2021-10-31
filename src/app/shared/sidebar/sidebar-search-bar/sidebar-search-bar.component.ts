@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { SidebarService } from '../sidebar.service';
 
 @Component({
   selector: 'app-sidebar-search-bar',
@@ -7,12 +8,17 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SidebarSearchBarComponent implements OnInit {
   options: boolean = false;
+  inputText: string = '';
   @Input() optionsContent: string[] = [];
-  constructor() {}
+  constructor(private sidebarService: SidebarService) {}
 
   ngOnInit(): void {}
 
   changeOptions() {
     this.options = !this.options;
+  }
+  addNewList() {
+    this.sidebarService.addUserList(this.inputText);
+    this.inputText = '';
   }
 }

@@ -9,9 +9,10 @@ import {
 } from 'ng-heroicons';
 import { DividerComponent } from './components/divider/divider.component';
 import { ListItemComponent } from './components/list-item/list-item.component';
+import { DropDownMenuComponent } from './components/drop-down-menu/drop-down-menu.component';
 
 @NgModule({
-  declarations: [DividerComponent, ListItemComponent],
+  declarations: [DividerComponent, ListItemComponent, DropDownMenuComponent],
   imports: [
     CommonModule,
     HeroIconsModule.withIcons({
@@ -21,6 +22,6 @@ import { ListItemComponent } from './components/list-item/list-item.component';
       checkCircleSolid,
     }),
   ],
-  exports: [DividerComponent, ListItemComponent],
+  exports: [DividerComponent, ListItemComponent, DropDownMenuComponent],
 })
 export class CoreModule {}

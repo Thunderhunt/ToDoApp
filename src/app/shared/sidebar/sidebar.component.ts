@@ -1,4 +1,12 @@
+import {
+  state,
+  style,
+  transition,
+  trigger,
+  useAnimation,
+} from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
+import { transitionAnimation } from 'src/app/core/animations/swipe-right-insert-remove.animation';
 import { ListItemModel } from './sidebar-item.model';
 import { SidebarService } from './sidebar.service';
 @Component({
@@ -11,10 +19,12 @@ export class SidebarComponent implements OnInit {
 
   mainMenu: ListItemModel[];
   userLists: ListItemModel[];
+  userGroups: ListItemModel[];
   selectedItem: string = '';
   constructor(public sidebarService: SidebarService) {
     this.mainMenu = sidebarService.getMainMenuItems();
     this.userLists = sidebarService.getUserListsItems();
+    this.userGroups = sidebarService.getUserGroupsItems();
   }
 
   ngOnInit(): void {}

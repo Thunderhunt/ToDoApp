@@ -14,7 +14,10 @@
       >{{ listItem.text }}</app-sidebar-item
     >
 
-    <app-sidebar-collapsable-item></app-sidebar-collapsable-item>
+    <app-sidebar-collapsable-item
+      *ngFor="let userGroup of userGroups"
+      [userGroup]="userGroup"
+    ></app-sidebar-collapsable-item>
   </ul>
   <app-divider class="block"></app-divider>
   <app-sidebar-search-bar

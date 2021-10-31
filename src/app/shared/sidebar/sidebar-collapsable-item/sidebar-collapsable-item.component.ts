@@ -1,11 +1,35 @@
+import {
+  transition, trigger, useAnimation
+} from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
+import { transitionAnimation } from 'src/app/core/animations/swipe-right-insert-remove.animation';
 import { ListItemModel } from '../sidebar-item.model';
-import { SidebarService } from '../sidebar.service';
-
 @Component({
   selector: 'app-sidebar-collapsable-item',
   templateUrl: './sidebar-collapsable-item.component.html',
   styleUrls: ['./sidebar-collapsable-item.component.scss'],
+  animations: [
+    trigger('myInsertRemoveTrigger', [
+      transition(':enter', [
+        useAnimation(transitionAnimation, {
+          params: {
+            initialTransformState: 'translate(-350px, 0px)',
+            duration: '200ms',
+            finalTransformState: 'translate(0px, 0px)',
+          },
+        }),
+      ]),
+      transition(':leave', [
+        useAnimation(transitionAnimation, {
+          params: {
+            initialTransformState: 'translate(0px, 0px)',
+            duration: '200ms',
+            finalTransformState: 'translate(-350px, 0px)',
+          },
+        }),
+      ]),
+    ]),
+  ],
 })
 export class SidebarCollapsableItemComponent implements OnInit {
   @Input() userGroup: ListItemModel = {
@@ -16,50 +40,16 @@ export class SidebarCollapsableItemComponent implements OnInit {
     fillIcon: 'star-solid',
     text: 'Group 1',
     badge: '11',
-    subItems: [
-      {
-        id: 'uiui132uiui1345433iu',
-        color: 'yellow',
-        shade: '500',
-        icon: 'star',
-        fillIcon: 'star-solid',
-        text: 'List 1',
-        badge: '11',
-        subItems: undefined,
-      },
-      {
-        id: 'uiui132uiu234ui13iu',
-        color: 'yellow',
-        shade: '500',
-        icon: 'star',
-        fillIcon: 'star-solid',
-        text: 'List 1',
-        badge: '11',
-        subItems: undefined,
-      },
-      {
-        id: 'uiui132uiui13ui23131u',
-        color: 'yellow',
-        shade: '500',
-        icon: 'star',
-        fillIcon: 'star-solid',
-        text: 'List 1',
-        badge: '11',
-        subItems: undefined,
-      },
-    ],
+    subItems: undefined,
   };
-  collapsed: string = 'block';
+
   isCollapsed: boolean = false;
-  constructor() {}
+  constructor() {
+   
+  }
 
   ngOnInit(): void {}
   collapseChange() {
-    if (this.isCollapsed) {
-      this.collapsed = 'hidden';
-    } else {
-      this.collapsed = 'block';
-    }
     this.isCollapsed = !this.isCollapsed;
   }
 }
