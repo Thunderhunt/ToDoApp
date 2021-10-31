@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./sidebar-search-bar.component.scss'],
 })
 export class SidebarSearchBarComponent implements OnInit {
-  options: boolean = true;
+  options: boolean = false;
   @Input() optionsContent: string[] = [];
   constructor() {}
 
