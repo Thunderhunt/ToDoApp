@@ -23,6 +23,10 @@ import {
   dotsVerticalSolid,
   collection,
   collectionSolid,
+  plus,
+  plusSolid,
+  userAdd,
+  userAddSolid,
 } from 'ng-heroicons';
 import { SidebarService } from './sidebar/sidebar.service';
 import { SidebarCollapsableItemComponent } from './sidebar/sidebar-collapsable-item/sidebar-collapsable-item.component';
@@ -61,6 +65,10 @@ import { FormsModule } from '@angular/forms';
       dotsVerticalSolid,
       collection,
       collectionSolid,
+      plus,
+      plusSolid,
+      userAdd,
+      userAddSolid,
     }),
   ],
   exports: [SidebarComponent],

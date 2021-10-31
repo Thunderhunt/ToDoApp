@@ -7,14 +7,49 @@
     z-20
     dark:bg-gray-800
     bg-green-100
-    p-2
     shadow-2xl
   "
 >
-  <h1 class="text-2xl mb-4">Item Name</h1>
-  <app-card>
-    <h1 class="p-4">Hello</h1>
-    <h1 class="p-4">Hello</h1>
-    <h1 class="p-4">Hello</h1>
-  </app-card>
+  <div class="flex flex-col h-full">
+    <div>
+      <app-card>
+        <div class="flex justify-between items-center">
+          <h1 class="text-2xl m-2 opacity-70">Item Name</h1>
+          <hero-icon
+            class="mx-2 cursor-pointer align-middle"
+            name="star"
+            size="24px"
+          ></hero-icon>
+        </div>
+        <app-text-field></app-text-field>
+      </app-card>
+
+      <app-divider></app-divider>
+    </div>
+    <div class="flex-grow flex flex-col justify-between">
+      <div>
+        <div class="px-2 pt-1">
+          <app-card [showShadow]="false">
+            <app-button icon="sun">Add to My Day</app-button>
+          </app-card>
+        </div>
+        <div class="px-2 pt-1">
+          <app-card [showShadow]="false">
+            <app-button icon="user-add">Assign to</app-button>
+          </app-card>
+        </div>
+        <div class="px-2 pt-1 hover:text-opacity-60">
+          <app-card>
+            <app-text-area></app-text-area>
+          </app-card>
+        </div>
+      </div>
+
+      <div class="">
+        <app-card>
+          <app-label></app-label>
+        </app-card>
+      </div>
+    </div>
+  </div>
 </div>

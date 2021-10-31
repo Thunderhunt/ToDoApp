@@ -1,12 +1,4 @@
-import {
-  state,
-  style,
-  transition,
-  trigger,
-  useAnimation,
-} from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
-import { transitionAnimation } from 'src/app/core/animations/swipe-right-insert-remove.animation';
 import { ListItemModel } from './sidebar-item.model';
 import { SidebarService } from './sidebar.service';
 @Component({
