@@ -9,6 +9,7 @@ import { ListItemModel } from '../sidebar-item.model';
 })
 export class SidebarGroupItemComponent implements OnInit {
   @Input() listItem: ListItemModel = {
+    id: 'uiui1324sdfiui13uiqweiu',
     color: '',
     shade: '',
     icon: 'star',

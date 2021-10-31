@@ -10,6 +10,7 @@
     <app-sidebar-item
       *ngFor="let listItem of userLists"
       [listItem]="listItem"
+      [selected]="this.selectedItem == listItem.id"
       >{{ listItem.text }}</app-sidebar-item
     >
 

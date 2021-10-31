@@ -9,6 +9,7 @@ import { SidebarService } from '../sidebar.service';
 })
 export class SidebarCollapsableItemComponent implements OnInit {
   @Input() userGroup: ListItemModel = {
+    id: 'uiui132uiui13ui13iu',
     color: 'green',
     shade: '500',
     icon: 'star',
@@ -17,6 +18,7 @@ export class SidebarCollapsableItemComponent implements OnInit {
     badge: '11',
     subItems: [
       {
+        id: 'uiui132uiui1345433iu',
         color: 'yellow',
         shade: '500',
         icon: 'star',
@@ -26,6 +28,7 @@ export class SidebarCollapsableItemComponent implements OnInit {
         subItems: undefined,
       },
       {
+        id: 'uiui132uiu234ui13iu',
         color: 'yellow',
         shade: '500',
         icon: 'star',
@@ -35,6 +38,7 @@ export class SidebarCollapsableItemComponent implements OnInit {
         subItems: undefined,
       },
       {
+        id: 'uiui132uiui13ui23131u',
         color: 'yellow',
         shade: '500',
         icon: 'star',

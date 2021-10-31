@@ -8,9 +8,11 @@ import { SidebarService } from './sidebar.service';
 })
 export class SidebarComponent implements OnInit {
   @Input() collapsed: boolean = false;
+
   mainMenu: ListItemModel[];
   userLists: ListItemModel[];
-  constructor(sidebarService: SidebarService) {
+  selectedItem: string = '';
+  constructor(public sidebarService: SidebarService) {
     this.mainMenu = sidebarService.getMainMenuItems();
     this.userLists = sidebarService.getUserListsItems();
   }
