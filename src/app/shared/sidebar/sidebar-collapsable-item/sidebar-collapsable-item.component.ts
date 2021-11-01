@@ -1,6 +1,4 @@
-import {
-  transition, trigger, useAnimation
-} from '@angular/animations';
+import { transition, trigger, useAnimation } from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
 import { transitionAnimation } from 'src/app/core/animations/swipe-right-insert-remove.animation';
 import { ListItemModel } from '../sidebar-item.model';
@@ -13,18 +11,18 @@ import { ListItemModel } from '../sidebar-item.model';
       transition(':enter', [
         useAnimation(transitionAnimation, {
           params: {
-            initialTransformState: 'translate(-350px, 0px)',
+            initialTransformState: 'scale(0.1) translate(350px, 0px) rotate(51deg)',
             duration: '200ms',
-            finalTransformState: 'translate(0px, 0px)',
+            finalTransformState: 'scale(1) translate(0px, 0px) rotate(0deg)',
           },
         }),
       ]),
       transition(':leave', [
         useAnimation(transitionAnimation, {
           params: {
-            initialTransformState: 'translate(0px, 0px)',
+            initialTransformState: 'scale(1) translate(0px, 0px)',
             duration: '200ms',
-            finalTransformState: 'translate(-350px, 0px)',
+            finalTransformState: 'scale(0.1) translate(-350px, 0px)',
           },
         }),
       ]),
@@ -44,9 +42,7 @@ export class SidebarCollapsableItemComponent implements OnInit {
   };
 
   isCollapsed: boolean = false;
-  constructor() {
-   
-  }
+  constructor() {}
 
   ngOnInit(): void {}
   collapseChange() {
