@@ -1,0 +1,3149 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "ListItemModel",
+            "id": "interface-ListItemModel-93b78aba702c1fbc4e7b7ec3b9b631eb384c3fd708575bc94b587ab37350697c6da655582c2bbc52a2e1d1c345155752d6e363c04195819f09fd7ffe6bb6ce8b",
+            "file": "src/app/shared/sidebar/sidebar-item.model.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { HeroIconName } from 'ng-heroicons';\r\n\r\nexport interface ListItemModel {\r\n  id: string;\r\n  color: string;\r\n  shade: string;\r\n  icon: HeroIconName;\r\n  fillIcon: HeroIconName;\r\n  text: string;\r\n  badge: string;\r\n  subItems: ListItemModel[] | undefined;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "badge",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "fillIcon",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "HeroIconName",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "icon",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "HeroIconName",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "shade",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "subItems",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ListItemModel[] | undefined",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "text",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "User",
+            "id": "interface-User-9c7e5f1bbbab702cb032307d130876cb68969b0cd4eedef32a0c8cad8081a54e5f8f577ed6ad4539c1b99a1d246cb34031d198c2ea8eba440e64e91b14f01fdc",
+            "file": "src/stories/User.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface User {}\n",
+            "properties": [],
+            "indexSignatures": [],
+            "methods": []
+        }
+    ],
+    "injectables": [
+        {
+            "name": "SidebarService",
+            "id": "injectable-SidebarService-2665bb88c91e730aaa8976321b8ed1dd8d8902d3d9f1ac05a55ac187ee684590b1e632d3d7d91b223fb18a83af4240a6e29f2492cdbcab4c6fb35c958e5e8e48",
+            "file": "src/app/shared/sidebar/sidebar.service.ts",
+            "properties": [
+                {
+                    "name": "colorPallete",
+                    "defaultValue": "['yellow', 'purple', 'green', 'blue', 'indigo']",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "currentSelectedItem",
+                    "defaultValue": "new Subject()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Subject<string>",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "mainMenu",
+                    "defaultValue": "[\r\n    {\r\n      id: 'uiui132uiui13ui0900',\r\n      color: 'yellow',\r\n      shade: '500',\r\n      icon: 'sun',\r\n      fillIcon: 'sun-solid',\r\n      text: 'My Day',\r\n      badge: '11',\r\n      subItems: undefined,\r\n    },\r\n    {\r\n      id: 'uiui132uiui1360065',\r\n      color: 'purple',\r\n      shade: '500',\r\n      icon: 'star',\r\n      fillIcon: 'star-solid',\r\n      text: 'Important',\r\n      badge: '11',\r\n      subItems: undefined,\r\n    },\r\n    {\r\n      id: 'uiui132u0650ui13iu',\r\n      color: 'green',\r\n      shade: '500',\r\n      icon: 'calendar',\r\n      fillIcon: 'calendar-solid',\r\n      text: 'Planned',\r\n      badge: '11',\r\n      subItems: undefined,\r\n    },\r\n    {\r\n      id: 'u456465uiui13ui13iu',\r\n      color: 'blue',\r\n      shade: '500',\r\n      icon: 'user',\r\n      fillIcon: 'user-solid',\r\n      text: 'Assigned to you',\r\n      badge: '11',\r\n      subItems: undefined,\r\n    },\r\n    {\r\n      id: 'ui5662uiui13ui13iu',\r\n      color: 'indigo',\r\n      shade: '500',\r\n      icon: 'home',\r\n      fillIcon: 'home-solid',\r\n      text: 'Tasks',\r\n      badge: '11',\r\n      subItems: undefined,\r\n    },\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ListItemModel[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "shadePallete",
+                    "defaultValue": "['400', '500', '600', '700', '800']",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "userGroups",
+                    "defaultValue": "[\r\n    {\r\n      id: 'uiui1324sd4543ui13iu',\r\n      color: 'yellow',\r\n      shade: '500',\r\n      icon: 'collection',\r\n      fillIcon: 'collection-solid',\r\n      text: 'List 1',\r\n      badge: '11',\r\n      subItems: [\r\n        {\r\n          id: 'uiui1asdsaui13ui13iu',\r\n          color: 'yellow',\r\n          shade: '500',\r\n          icon: 'view-list',\r\n          fillIcon: 'view-list-solid',\r\n          text: 'List 1',\r\n          badge: '11',\r\n          subItems: undefined,\r\n        },\r\n        {\r\n          id: 'uiui133534ui13ui13iu',\r\n          color: 'yellow',\r\n          shade: '500',\r\n          icon: 'view-list',\r\n          fillIcon: 'view-list-solid',\r\n          text: 'List 1',\r\n          badge: '11',\r\n          subItems: undefined,\r\n        },\r\n      ],\r\n    },\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ListItemModel[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 86
+                },
+                {
+                    "name": "userLists",
+                    "defaultValue": "[\r\n    {\r\n      id: 'ui465s324sdfiui13ui13iu',\r\n      color: 'yellow',\r\n      shade: '500',\r\n      icon: 'view-list',\r\n      fillIcon: 'view-list-solid',\r\n      text: 'List 1',\r\n      badge: '11',\r\n      subItems: undefined,\r\n    },\r\n    {\r\n      id: 'ui3224sdfiui13ui13iu',\r\n      color: 'purple',\r\n      shade: '500',\r\n      icon: 'view-list',\r\n      fillIcon: 'view-list-solid',\r\n      text: 'List 2',\r\n      badge: '11',\r\n      subItems: undefined,\r\n    },\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ListItemModel[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 63
+                }
+            ],
+            "methods": [
+                {
+                    "name": "addUserList",
+                    "args": [
+                        {
+                            "name": "name",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 136,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "name",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "changeSelectedIndex",
+                    "args": [
+                        {
+                            "name": "id",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 132,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "id",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "createUUID",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 151,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "getMainMenuItems",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "ListItemModel[]",
+                    "typeParameters": [],
+                    "line": 122,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "getRandomElementOfArray",
+                    "args": [
+                        {
+                            "name": "array",
+                            "type": "Array<any>",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Array<any>",
+                    "typeParameters": [],
+                    "line": 162,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "array",
+                            "type": "Array<any>",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getUserGroupsItems",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "ListItemModel[]",
+                    "typeParameters": [],
+                    "line": 129,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "getUserListsItems",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "ListItemModel[]",
+                    "typeParameters": [],
+                    "line": 126,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\r\nimport { Subject } from 'rxjs';\r\nimport { ListItemModel } from './sidebar-item.model';\r\n\r\n@Injectable()\r\nexport class SidebarService {\r\n  currentSelectedItem: Subject<string> = new Subject();\r\n  colorPallete: string[] = ['yellow', 'purple', 'green', 'blue', 'indigo'];\r\n  shadePallete: string[] = ['400', '500', '600', '700', '800'];\r\n  mainMenu: ListItemModel[] = [\r\n    {\r\n      id: 'uiui132uiui13ui0900',\r\n      color: 'yellow',\r\n      shade: '500',\r\n      icon: 'sun',\r\n      fillIcon: 'sun-solid',\r\n      text: 'My Day',\r\n      badge: '11',\r\n      subItems: undefined,\r\n    },\r\n    {\r\n      id: 'uiui132uiui1360065',\r\n      color: 'purple',\r\n      shade: '500',\r\n      icon: 'star',\r\n      fillIcon: 'star-solid',\r\n      text: 'Important',\r\n      badge: '11',\r\n      subItems: undefined,\r\n    },\r\n    {\r\n      id: 'uiui132u0650ui13iu',\r\n      color: 'green',\r\n      shade: '500',\r\n      icon: 'calendar',\r\n      fillIcon: 'calendar-solid',\r\n      text: 'Planned',\r\n      badge: '11',\r\n      subItems: undefined,\r\n    },\r\n    {\r\n      id: 'u456465uiui13ui13iu',\r\n      color: 'blue',\r\n      shade: '500',\r\n      icon: 'user',\r\n      fillIcon: 'user-solid',\r\n      text: 'Assigned to you',\r\n      badge: '11',\r\n      subItems: undefined,\r\n    },\r\n    {\r\n      id: 'ui5662uiui13ui13iu',\r\n      color: 'indigo',\r\n      shade: '500',\r\n      icon: 'home',\r\n      fillIcon: 'home-solid',\r\n      text: 'Tasks',\r\n      badge: '11',\r\n      subItems: undefined,\r\n    },\r\n  ];\r\n\r\n  userLists: ListItemModel[] = [\r\n    {\r\n      id: 'ui465s324sdfiui13ui13iu',\r\n      color: 'yellow',\r\n      shade: '500',\r\n      icon: 'view-list',\r\n      fillIcon: 'view-list-solid',\r\n      text: 'List 1',\r\n      badge: '11',\r\n      subItems: undefined,\r\n    },\r\n    {\r\n      id: 'ui3224sdfiui13ui13iu',\r\n      color: 'purple',\r\n      shade: '500',\r\n      icon: 'view-list',\r\n      fillIcon: 'view-list-solid',\r\n      text: 'List 2',\r\n      badge: '11',\r\n      subItems: undefined,\r\n    },\r\n  ];\r\n\r\n  userGroups: ListItemModel[] = [\r\n    {\r\n      id: 'uiui1324sd4543ui13iu',\r\n      color: 'yellow',\r\n      shade: '500',\r\n      icon: 'collection',\r\n      fillIcon: 'collection-solid',\r\n      text: 'List 1',\r\n      badge: '11',\r\n      subItems: [\r\n        {\r\n          id: 'uiui1asdsaui13ui13iu',\r\n          color: 'yellow',\r\n          shade: '500',\r\n          icon: 'view-list',\r\n          fillIcon: 'view-list-solid',\r\n          text: 'List 1',\r\n          badge: '11',\r\n          subItems: undefined,\r\n        },\r\n        {\r\n          id: 'uiui133534ui13ui13iu',\r\n          color: 'yellow',\r\n          shade: '500',\r\n          icon: 'view-list',\r\n          fillIcon: 'view-list-solid',\r\n          text: 'List 1',\r\n          badge: '11',\r\n          subItems: undefined,\r\n        },\r\n      ],\r\n    },\r\n  ];\r\n\r\n  constructor() {}\r\n\r\n  getMainMenuItems(): ListItemModel[] {\r\n    return this.mainMenu;\r\n  }\r\n\r\n  getUserListsItems(): ListItemModel[] {\r\n    return this.userLists;\r\n  }\r\n  getUserGroupsItems(): ListItemModel[] {\r\n    return this.userGroups;\r\n  }\r\n  changeSelectedIndex(id: string) {\r\n    this.currentSelectedItem.next(id);\r\n  }\r\n\r\n  addUserList(name: string) {\r\n    let newList: ListItemModel = {\r\n      id: this.createUUID(),\r\n      badge: '',\r\n      color: this.getRandomElementOfArray(this.colorPallete),\r\n      shade: this.getRandomElementOfArray(this.shadePallete),\r\n      icon: 'view-list',\r\n      fillIcon: 'view-list-solid',\r\n      text: name,\r\n      subItems: undefined,\r\n    };\r\n\r\n    this.userLists.push(newList);\r\n  }\r\n\r\n  createUUID() {\r\n    var dt = new Date().getTime();\r\n    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(\r\n      /[xy]/g,\r\n      function (c) {\r\n        var r = (dt + Math.random() * 16) % 16 | 0;\r\n        dt = Math.floor(dt / 16);\r\n        return (c == 'x' ? r : (r & 0x3) | 0x8).toString(16);\r\n      }\r\n    );\r\n  }\r\n  getRandomElementOfArray(array: Array<any>) {\r\n    let index = Math.floor(Math.random() * array.length);\r\n    return array[index];\r\n  }\r\n}\r\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 118
+            },
+            "type": "injectable"
+        }
+    ],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-746b5039a5d677543eab12cc04f3d4c573586eea5c5231d5a7ff2b74e63f42f7fddab59151494e690071dff0929fcc7aaaf14a72834f9b03465aa6fc6cf77b68",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "'todoApp'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  title = 'todoApp';\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"grid-cols-12 box-border grid w-screen h-screen\">\r\n  <app-sidebar\r\n    class=\"\r\n      col-span-12\r\n      md:col-span-3\r\n      transition-all\r\n      block\r\n      duration-500\r\n      h-auto\r\n      shadow-2xl\r\n      z-20\r\n      dark:bg-gray-800\r\n      \r\n    \"\r\n  ></app-sidebar>\r\n\r\n  <main\r\n    class=\"h-auto hidden md:block col-span-12 md:col-span-9 overflow-hidden\"\r\n  >\r\n    <app-item-details-pane></app-item-details-pane>\r\n    <app-content-pane></app-content-pane>\r\n  </main>\r\n</div>\r\n"
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-4ef205c97a334c309aa4001c8ab4a6d9571dcae18d0e85aaf0d367467ab5d3a9f13ab3573726f1fcb409bc9b49894dadfb80b1bbe1b6ba7041455ad9d4922004",
+            "file": "src/stories/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-button",
+            "styleUrls": [
+                "./button.css"
+            ],
+            "styles": [],
+            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\"\n >\n   {{ label }}\n </button>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat background color to use\n",
+                    "description": "<p>What background color to use</p>\n",
+                    "line": 26,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 711,
+                            "end": 724,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 712,
+                                "end": 720,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nButton contents\n\n",
+                    "description": "<p>Button contents</p>\n",
+                    "line": 40,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "primary",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
+                    "description": "<p>Is this the principal call to action on the page?</p>\n",
+                    "line": 20,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nHow large should the button be?\n",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 32,
+                    "type": "\"small\" | \"medium\" | \"large\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nOptional click handler\n",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 46,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    {{ label }}\n  </button>`,\n  styleUrls: ['./button.css'],\n})\nexport default class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
+                    "styleUrl": "./button.css"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 48
+                    }
+                }
+            }
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-478e5c1165867a99cc89fa365ecdf6592edcd35b7242ab875563d6957f22870d99cab42113a27d03fc37f3d260862f93c85c6c390916ee3af77a57e3522d904e-1",
+            "file": "src/app/core/components/button/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-button",
+            "styleUrls": [
+                "./button.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./button.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "icon",
+                    "defaultValue": "'sun'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "HeroIconName",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 13,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { HeroIconName } from 'ng-heroicons';\n\n@Component({\n  selector: 'app-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n})\nexport class ButtonComponent implements OnInit {\n  @Input() icon: HeroIconName = 'sun';\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./button.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 10
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "ButtonComponent-1",
+            "templateData": "<div class=\"flex justify-end items-center hover:text-opacity-60\">\n  <hero-icon\n    class=\"mx-2 cursor-pointer align-middle opacity-40\"\n    [name]=\"icon\"\n    size=\"20px\"\n  ></hero-icon>\n  <button\n    class=\"p-2 w-full bg-transparent px-2 text-left outline-none\"\n    type=\"text\"\n  >\n    <ng-content></ng-content>\n  </button>\n</div>\n"
+        },
+        {
+            "name": "CardComponent",
+            "id": "component-CardComponent-980566b7a73d5f29be45a276ef1e293d7813bad912f94f0e6ce3b5138f2dc6f6113d96edd18b1a3a8fae6ca2f13ac895d983b532cf10dfb337f99c280f4899bd",
+            "file": "src/app/core/components/card/card.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-card",
+            "styleUrls": [
+                "./card.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./card.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "showShadow",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-card',\r\n  templateUrl: './card.component.html',\r\n  styleUrls: ['./card.component.scss'],\r\n})\r\nexport class CardComponent implements OnInit {\r\n  @Input() showShadow: boolean = true;\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./card.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 9
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"dark:bg-gray-700 bg-gray-300 bg-opacity-30\" [ngClass]=\"{ 'shadow-lg': showShadow }\">\r\n  <ng-content> </ng-content>\r\n</div>\r\n"
+        },
+        {
+            "name": "ContentPaneComponent",
+            "id": "component-ContentPaneComponent-854e37d1a5835588d6abd4d3c1a07bdcfc63f53dc11be9ca634dde6ea2d93678589654e3f567808991d796cd1f981f465c1c3f7ca1cdd5136036b86c447e611d",
+            "file": "src/app/modules/task/components/content-pane/content-pane.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-content-pane",
+            "styleUrls": [
+                "./content-pane.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./content-pane.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "x",
+                    "defaultValue": "[\r\n    '1',\r\n    '2',\r\n    '1',\r\n    '2',\r\n    '1',\r\n    '2',\r\n    '1',\r\n    '2',\r\n    '1',\r\n    '2',\r\n    '1',\r\n    '2',\r\n    '1',\r\n    '2',\r\n    '1',\r\n    '2',\r\n    '1',\r\n    '2',\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 31,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-content-pane',\r\n  templateUrl: './content-pane.component.html',\r\n  styleUrls: ['./content-pane.component.scss'],\r\n})\r\nexport class ContentPaneComponent implements OnInit {\r\n  x: string[] = [\r\n    '1',\r\n    '2',\r\n    '1',\r\n    '2',\r\n    '1',\r\n    '2',\r\n    '1',\r\n    '2',\r\n    '1',\r\n    '2',\r\n    '1',\r\n    '2',\r\n    '1',\r\n    '2',\r\n    '1',\r\n    '2',\r\n    '1',\r\n    '2',\r\n  ];\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./content-pane.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 28
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<app-title-pane></app-title-pane>\r\n<div class=\"h-full w-full pb-4 overflow-auto\">\r\n  <app-divider></app-divider>\r\n  <div class=\"mt-8\">\r\n    <div *ngFor=\"let y of x\" class=\"my-2 mx-8\">\r\n      <app-list-item></app-list-item>\r\n\r\n      <app-divider></app-divider>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "DividerComponent",
+            "id": "component-DividerComponent-be7b78718fc669ccb7eb7b36ee8c474e9474dcc38e037ef8b626ee107230864b5f34615c0041d7fe213693dd4a106e1965bdb54474b151130fbb7354ee6cc170",
+            "file": "src/app/core/components/divider/divider.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-divider",
+            "styleUrls": [
+                "./divider.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./divider.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-divider',\r\n  templateUrl: './divider.component.html',\r\n  styleUrls: ['./divider.component.scss']\r\n})\r\nexport class DividerComponent implements OnInit {\r\n\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./divider.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<hr\r\n  class=\"\r\n    border-opacity-30\r\n    dark:border-opacity-70\r\n    border-gray-400\r\n    dark:border-gray-700\r\n  \"\r\n/>\r\n"
+        },
+        {
+            "name": "DropDownMenuComponent",
+            "id": "component-DropDownMenuComponent-faaec5acb8ed5bb7c015bccfc701caeed1a27062d08ff10fb7e590beacf14c57e745c36ac12accfad7f1d31349e60718af916c4166c177fe5dd9bad5197e1c79",
+            "file": "src/app/core/components/drop-down-menu/drop-down-menu.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-drop-down-menu",
+            "styleUrls": [
+                "./drop-down-menu.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./drop-down-menu.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-drop-down-menu',\r\n  templateUrl: './drop-down-menu.component.html',\r\n  styleUrls: ['./drop-down-menu.component.scss']\r\n})\r\nexport class DropDownMenuComponent implements OnInit {\r\n\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./drop-down-menu.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"p-10\">\r\n  <div class=\"dropdown inline-block relative\">\r\n    <button\r\n      class=\"\r\n        bg-gray-300\r\n        text-gray-700\r\n        font-semibold\r\n        py-2\r\n        px-4\r\n        rounded\r\n        inline-flex\r\n        items-center\r\n      \"\r\n    >\r\n      <span class=\"mr-1\">Dropdown</span>\r\n      <svg\r\n        class=\"fill-current h-4 w-4\"\r\n        xmlns=\"http://www.w3.org/2000/svg\"\r\n        viewBox=\"0 0 20 20\"\r\n      >\r\n        <path\r\n          d=\"M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z\"\r\n        />\r\n      </svg>\r\n    </button>\r\n    <ul class=\"dropdown-menu absolute hidden text-gray-700 pt-1\">\r\n      <li class=\"\">\r\n        <a\r\n          class=\"\r\n            rounded-t\r\n            bg-gray-200\r\n            hover:bg-gray-400\r\n            py-2\r\n            px-4\r\n            block\r\n            whitespace-no-wrap\r\n          \"\r\n          href=\"#\"\r\n          >One</a\r\n        >\r\n      </li>\r\n      <li class=\"\">\r\n        <a\r\n          class=\"\r\n            bg-gray-200\r\n            hover:bg-gray-400\r\n            py-2\r\n            px-4\r\n            block\r\n            whitespace-no-wrap\r\n          \"\r\n          href=\"#\"\r\n          >Two</a\r\n        >\r\n      </li>\r\n      <li class=\"\">\r\n        <a\r\n          class=\"\r\n            rounded-b\r\n            bg-gray-200\r\n            hover:bg-gray-400\r\n            py-2\r\n            px-4\r\n            block\r\n            whitespace-no-wrap\r\n          \"\r\n          href=\"#\"\r\n          >Three is the magic number</a\r\n        >\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "HeaderComponent",
+            "id": "component-HeaderComponent-0cd94fbc94a83702e45bf987cb3b3f9074d69cd27e6ca2e4fbac0dc5b5047bd4dc3a9ce8a77f6bd9ab7ae3e6ca8e49b34bed529ca0da0fa428fec544a0324870",
+            "file": "src/stories/header.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-header",
+            "styleUrls": [
+                "./header.css"
+            ],
+            "styles": [],
+            "template": "<header>    <div class=\"wrapper\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <storybook-button\n          *ngIf=\"user\"\n          size=\"small\"\n          (onClick)=\"onLogout.emit($event)\"\n          label=\"Log out\"\n        ></storybook-button>\n        <storybook-button\n          *ngIf=\"!user\"\n          size=\"small\"\n          (onClick)=\"onLogin.emit($event)\"\n          label=\"Log in\"\n        ></storybook-button>\n        <storybook-button\n          *ngIf=\"!user\"\n          primary\n          size=\"small\"\n          (onClick)=\"onCreateAccount.emit($event)\"\n          label=\"Sign up\"\n        ></storybook-button>\n      </div>\n    </div>\n  </header>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 54,
+                    "type": "User | null",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onCreateAccount",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 63,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogin",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 57,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogout",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 60,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport { User } from './User';\n\n@Component({\n  selector: 'storybook-header',\n  template: `<header>\n    <div class=\"wrapper\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <storybook-button\n          *ngIf=\"user\"\n          size=\"small\"\n          (onClick)=\"onLogout.emit($event)\"\n          label=\"Log out\"\n        ></storybook-button>\n        <storybook-button\n          *ngIf=\"!user\"\n          size=\"small\"\n          (onClick)=\"onLogin.emit($event)\"\n          label=\"Log in\"\n        ></storybook-button>\n        <storybook-button\n          *ngIf=\"!user\"\n          primary\n          size=\"small\"\n          (onClick)=\"onCreateAccount.emit($event)\"\n          label=\"Sign up\"\n        ></storybook-button>\n      </div>\n    </div>\n  </header>`,\n  styleUrls: ['./header.css'],\n})\nexport default class HeaderComponent {\n  @Input()\n  user: User | null = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".wrapper {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\nsvg {\n  display: inline-block;\n  vertical-align: top;\n}\n\nh1 {\n  font-weight: 900;\n  font-size: 20px;\n  line-height: 1;\n  margin: 6px 0 6px 10px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nbutton + button {\n  margin-left: 10px;\n}\n",
+                    "styleUrl": "./header.css"
+                }
+            ],
+            "stylesData": ""
+        },
+        {
+            "name": "HeroComponent",
+            "id": "component-HeroComponent-07f82987988c13cd81d15866835243d742b3d78e64ed0d10e1bc18b613f1d1c2300bf8c29745210d3f93f093b1379c75bf99f60880154e749ef69334c25c48d0",
+            "file": "src/app/shared/hero/hero.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-hero",
+            "styleUrls": [
+                "./hero.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./hero.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "classes",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-hero',\r\n  templateUrl: './hero.component.html',\r\n  styleUrls: ['./hero.component.scss'],\r\n})\r\nexport class HeroComponent implements OnInit {\r\n  @Input() classes: string = '';\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./hero.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 9
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div [classList]=\"classes\">\r\n  <h1\r\n    class=\"\r\n      font-extrabold\r\n      text-xxl\r\n      m-auto\r\n      transition-all\r\n      duration-500\r\n      rounded-md\r\n      border-r-16\r\n      text-center\r\n      p-1\r\n      align-middle\r\n      border-2 border-green-400\r\n      hover:bg-green-400 hover:text-white\r\n      dark:hover:text-black\r\n    \"\r\n  >\r\n    Todo App\r\n  </h1>\r\n</div>\r\n"
+        },
+        {
+            "name": "ItemDetailsPaneComponent",
+            "id": "component-ItemDetailsPaneComponent-40dab30c648dab835a90de7c64f99372cba0d3c640fe510446fd254af2d6c6d26fade7b2f324085bae53e1559268685c2a49d90dbeaafa13e1b7bc48733384e2",
+            "file": "src/app/modules/task/components/item-details-pane/item-details-pane.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-item-details-pane",
+            "styleUrls": [
+                "./item-details-pane.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./item-details-pane.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-item-details-pane',\r\n  templateUrl: './item-details-pane.component.html',\r\n  styleUrls: ['./item-details-pane.component.scss']\r\n})\r\nexport class ItemDetailsPaneComponent implements OnInit {\r\n\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./item-details-pane.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div\r\n  class=\"\r\n    fixed\r\n    right-0\r\n    h-screen\r\n    w-1/4\r\n    z-20\r\n    dark:bg-gray-800\r\n    bg-green-100\r\n    shadow-2xl\r\n  \"\r\n>\r\n  <div class=\"flex flex-col h-full\">\r\n    <div>\r\n      <app-card>\r\n        <div class=\"flex justify-between items-center\">\r\n          <h1 class=\"text-2xl m-2 opacity-70\">Item Name</h1>\r\n          <hero-icon\r\n            class=\"mx-2 cursor-pointer align-middle\"\r\n            name=\"star\"\r\n            size=\"24px\"\r\n          ></hero-icon>\r\n        </div>\r\n        <app-text-field></app-text-field>\r\n      </app-card>\r\n\r\n      <app-divider></app-divider>\r\n    </div>\r\n    <div class=\"flex-grow flex flex-col justify-between\">\r\n      <div>\r\n        <div class=\"px-2 pt-1\">\r\n          <app-card [showShadow]=\"false\">\r\n            <app-button icon=\"sun\">Add to My Day</app-button>\r\n          </app-card>\r\n        </div>\r\n        <div class=\"px-2 pt-1\">\r\n          <app-card [showShadow]=\"false\">\r\n            <app-button icon=\"user-add\">Assign to</app-button>\r\n          </app-card>\r\n        </div>\r\n        <div class=\"px-2 pt-1 hover:text-opacity-60\">\r\n          <app-card>\r\n            <app-text-area></app-text-area>\r\n          </app-card>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"\">\r\n        <app-card>\r\n          <app-label>Created on 12th August,2021</app-label>\r\n        </app-card>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "LabelComponent",
+            "id": "component-LabelComponent-0b2fdafe079cde79c407e89c26d9bd9995dae27520460bee327f8b1c3176b680e9e17f4389321dc3746d0a8bcc3e2a25858751cb5900706454eddd8eb0248b67",
+            "file": "src/app/core/components/label/label.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-label",
+            "styleUrls": [
+                "./label.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./label.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-label',\n  templateUrl: './label.component.html',\n  styleUrls: ['./label.component.scss']\n})\nexport class LabelComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./label.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"flex justify-between items-center\">\n  <hero-icon\n    class=\"mx-2 cursor-pointer align-middle\"\n    name=\"star\"\n    size=\"24px\"\n  ></hero-icon>\n  <label class=\"px-2 py-3 text-center block flex-grow\">\n    <ng-content></ng-content>\n  </label>\n  <hero-icon\n    class=\"mx-2 cursor-pointer align-middle\"\n    name=\"star\"\n    size=\"24px\"\n  ></hero-icon>\n</div>\n"
+        },
+        {
+            "name": "ListItemComponent",
+            "id": "component-ListItemComponent-77ae2a0441bc43bd192a5866976b6fb4061081f830fc9d0c6d8a9b309f7c3a32a77a5df36215ff56e78e990a33678692c7fbd801699ff5c942e9e344e08ed7a1",
+            "file": "src/app/core/components/list-item/list-item.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-list-item",
+            "styleUrls": [
+                "./list-item.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./list-item.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-list-item',\r\n  templateUrl: './list-item.component.html',\r\n  styleUrls: ['./list-item.component.scss']\r\n})\r\nexport class ListItemComponent implements OnInit {\r\n\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./list-item.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"bg-opacity-10 bg-gray-400 py-1\">\r\n  <div class=\"flex justify-between items-center\">\r\n    <div class=\"flex justify-between items-center\">\r\n      <hero-icon\r\n        class=\"mx-4 inline-block cursor-pointer\"\r\n        name=\"check-circle\"\r\n        size=\"24px\"\r\n      ></hero-icon>\r\n      <h1 class=\"text-lg font-normal px-4 py-1 dark:text-white text-black\">\r\n        Azure Engineering\r\n      </h1>\r\n    </div>\r\n\r\n    <hero-icon class=\"mr-4\" name=\"star\" size=\"24px\"></hero-icon>\r\n  </div>\r\n  <p class=\"mx-4 my-1 hidden\"></p>\r\n<div class=\"h-4\">\r\n\r\n</div>\r\n</div>\r\n"
+        },
+        {
+            "name": "PageComponent",
+            "id": "component-PageComponent-432c9ae0bcf6e2e1f46701f7565a67376cb10145b7d049c5fe930cf8f075c6e02e24151589750b18cbaa8266f7c61393b95c4d833fbfd71ee228904aa014349f",
+            "file": "src/stories/page.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-page",
+            "styleUrls": [
+                "./page.css"
+            ],
+            "styles": [],
+            "template": "<article>    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"onLogout.emit($event)\"\n      (onLogin)=\"onLogin.emit($event)\"\n      (onCreateAccount)=\"onCreateAccount.emit($event)\"\n    ></storybook-header>\n    <section>\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 65,
+                    "type": "User | null",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onCreateAccount",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 74,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogin",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 68,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogout",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 71,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport { User } from './User';\n\n@Component({\n  selector: 'storybook-page',\n  template: `<article>\n    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"onLogout.emit($event)\"\n      (onLogin)=\"onLogin.emit($event)\"\n      (onCreateAccount)=\"onCreateAccount.emit($event)\"\n    ></storybook-header>\n    <section>\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>`,\n  styleUrls: ['./page.css'],\n})\nexport default class PageComponent {\n  @Input()\n  user: User | null = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n\n// export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (\n//   <article>\n//     <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />\n\n// );\n// Page.propTypes = {\n//   user: PropTypes.shape({}),\n//   onLogin: PropTypes.func.isRequired,\n//   onLogout: PropTypes.func.isRequired,\n//   onCreateAccount: PropTypes.func.isRequired,\n// };\n\n// Page.defaultProps = {\n//   user: null,\n// };\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "section {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  padding: 48px 20px;\n  margin: 0 auto;\n  max-width: 600px;\n  color: #333;\n}\n\nsection h2 {\n  font-weight: 900;\n  font-size: 32px;\n  line-height: 1;\n  margin: 0 0 4px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nsection p {\n  margin: 1em 0;\n}\n\nsection a {\n  text-decoration: none;\n  color: #1ea7fd;\n}\n\nsection ul {\n  padding-left: 30px;\n  margin: 1em 0;\n}\n\nsection li {\n  margin-bottom: 8px;\n}\n\nsection .tip {\n  display: inline-block;\n  border-radius: 1em;\n  font-size: 11px;\n  line-height: 12px;\n  font-weight: 700;\n  background: #e7fdd8;\n  color: #66bf3c;\n  padding: 4px 12px;\n  margin-right: 10px;\n  vertical-align: top;\n}\n\nsection .tip-wrapper {\n  font-size: 13px;\n  line-height: 20px;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n\nsection .tip-wrapper svg {\n  display: inline-block;\n  height: 12px;\n  width: 12px;\n  margin-right: 4px;\n  vertical-align: top;\n  margin-top: 3px;\n}\n\nsection .tip-wrapper svg path {\n  fill: #1ea7fd;\n}\n",
+                    "styleUrl": "./page.css"
+                }
+            ],
+            "stylesData": ""
+        },
+        {
+            "name": "SidebarCollapsableItemComponent",
+            "id": "component-SidebarCollapsableItemComponent-da47c8f42ee6cf16309ab28ad48dbf17abf44e39e7fb01803103ba047dbea86f8940ae113b342437e944a5e92ce6196cdf7aec82084dfb945e83b516b0f8b9bf",
+            "file": "src/app/shared/sidebar/sidebar-collapsable-item/sidebar-collapsable-item.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-sidebar-collapsable-item",
+            "styleUrls": [
+                "./sidebar-collapsable-item.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./sidebar-collapsable-item.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "userGroup",
+                    "defaultValue": "{\r\n    id: 'uiui132uiui13ui13iu',\r\n    color: 'green',\r\n    shade: '500',\r\n    icon: 'star',\r\n    fillIcon: 'star-solid',\r\n    text: 'Group 1',\r\n    badge: '11',\r\n    subItems: undefined,\r\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 33,
+                    "type": "ListItemModel",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "isCollapsed",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 44
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "collapseChange",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 48,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 47,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { transition, trigger, useAnimation } from '@angular/animations';\r\nimport { Component, Input, OnInit } from '@angular/core';\r\nimport { transitionAnimation } from 'src/app/core/animations/swipe-right-insert-remove.animation';\r\nimport { ListItemModel } from '../sidebar-item.model';\r\n@Component({\r\n  selector: 'app-sidebar-collapsable-item',\r\n  templateUrl: './sidebar-collapsable-item.component.html',\r\n  styleUrls: ['./sidebar-collapsable-item.component.scss'],\r\n  animations: [\r\n    trigger('myInsertRemoveTrigger', [\r\n      transition(':enter', [\r\n        useAnimation(transitionAnimation, {\r\n          params: {\r\n            initialTransformState: 'scale(0.1) translate(350px, 0px) rotate(51deg)',\r\n            duration: '200ms',\r\n            finalTransformState: 'scale(1) translate(0px, 0px) rotate(0deg)',\r\n          },\r\n        }),\r\n      ]),\r\n      transition(':leave', [\r\n        useAnimation(transitionAnimation, {\r\n          params: {\r\n            initialTransformState: 'scale(1) translate(0px, 0px)',\r\n            duration: '200ms',\r\n            finalTransformState: 'scale(0.1) translate(-350px, 0px)',\r\n          },\r\n        }),\r\n      ]),\r\n    ]),\r\n  ],\r\n})\r\nexport class SidebarCollapsableItemComponent implements OnInit {\r\n  @Input() userGroup: ListItemModel = {\r\n    id: 'uiui132uiui13ui13iu',\r\n    color: 'green',\r\n    shade: '500',\r\n    icon: 'star',\r\n    fillIcon: 'star-solid',\r\n    text: 'Group 1',\r\n    badge: '11',\r\n    subItems: undefined,\r\n  };\r\n\r\n  isCollapsed: boolean = false;\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n  collapseChange() {\r\n    this.isCollapsed = !this.isCollapsed;\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./sidebar-collapsable-item.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 44
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div (click)=\"collapseChange()\">\r\n  <app-sidebar-group-item [listItem]=\"userGroup\">\r\n    {{ userGroup.text }}</app-sidebar-group-item\r\n  >\r\n  <div\r\n    *ngIf=\"!isCollapsed\"\r\n    @myInsertRemoveTrigger\r\n    class=\"ml-11 border-l-2 border-gray-600\"\r\n  >\r\n    <app-sidebar-item\r\n      *ngFor=\"let listItem of userGroup.subItems\"\r\n      [listItem]=\"listItem\"\r\n    >\r\n      {{ listItem.text }}\r\n    </app-sidebar-item>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "SidebarComponent",
+            "id": "component-SidebarComponent-bf97762c78ed322ff6c0f45afd11d49aab36f63323b6ab6e8071f308250c3ef8b37766e1348b0d88c4b052c20b8562ef9e5d588d779c1dd74c4db72a4d0aa674",
+            "file": "src/app/shared/sidebar/sidebar.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-sidebar",
+            "styleUrls": [
+                "./sidebar.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./sidebar.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "collapsed",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "mainMenu",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ListItemModel[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "selectedItem",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "sidebarService",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "SidebarService",
+                    "optional": false,
+                    "description": "",
+                    "line": 16,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "userGroups",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ListItemModel[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "userLists",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ListItemModel[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 22,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\r\nimport { ListItemModel } from './sidebar-item.model';\r\nimport { SidebarService } from './sidebar.service';\r\n@Component({\r\n  selector: 'app-sidebar',\r\n  templateUrl: './sidebar.component.html',\r\n  styleUrls: ['./sidebar.component.scss'],\r\n})\r\nexport class SidebarComponent implements OnInit {\r\n  @Input() collapsed: boolean = false;\r\n\r\n  mainMenu: ListItemModel[];\r\n  userLists: ListItemModel[];\r\n  userGroups: ListItemModel[];\r\n  selectedItem: string = '';\r\n  constructor(public sidebarService: SidebarService) {\r\n    this.mainMenu = sidebarService.getMainMenuItems();\r\n    this.userLists = sidebarService.getUserListsItems();\r\n    this.userGroups = sidebarService.getUserGroupsItems();\r\n  }\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./sidebar.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "sidebarService",
+                        "type": "SidebarService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 15,
+                "jsdoctags": [
+                    {
+                        "name": "sidebarService",
+                        "type": "SidebarService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"h-screen flex flex-col overflow-hidden\">\r\n  <app-hero classes=\"w-2/3 mt-4 m-auto flex cursor-pointer\"></app-hero>\r\n\r\n  <ul class=\"block flex-1 w-full h-screen mt-4 overflow-y-scroll\">\r\n    <app-sidebar-item *ngFor=\"let item of mainMenu\" [listItem]=\"item\">{{\r\n      item.text\r\n    }}</app-sidebar-item>\r\n\r\n    <app-divider></app-divider>\r\n    <app-sidebar-item\r\n      *ngFor=\"let listItem of userLists\"\r\n      [listItem]=\"listItem\"\r\n      [selected]=\"this.selectedItem == listItem.id\"\r\n      >{{ listItem.text }}</app-sidebar-item\r\n    >\r\n\r\n    <app-sidebar-collapsable-item\r\n      *ngFor=\"let userGroup of userGroups\"\r\n      [userGroup]=\"userGroup\"\r\n    ></app-sidebar-collapsable-item>\r\n  </ul>\r\n  <app-divider class=\"block\"></app-divider>\r\n  <app-sidebar-search-bar\r\n    class=\"w-full\"\r\n    [optionsContent]=\"['Option 1', 'Option 2', 'Option 3']\"\r\n  ></app-sidebar-search-bar>\r\n</div>\r\n"
+        },
+        {
+            "name": "SidebarGroupItemComponent",
+            "id": "component-SidebarGroupItemComponent-31b5d5147e9ccd329ca5bd2e41d3b68b8999bef1c56968993f49c50417381b0afb073766fec4df2bcc1afe06bdbb6f5b007cc777cb0987111984dc262eef8e69",
+            "file": "src/app/shared/sidebar/sidebar-group-item/sidebar-group-item.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-sidebar-group-item",
+            "styleUrls": [
+                "./sidebar-group-item.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./sidebar-group-item.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "listItem",
+                    "defaultValue": "{\r\n    id: 'uiui1324sdfiui13uiqweiu',\r\n    color: '',\r\n    shade: '',\r\n    icon: 'star',\r\n    fillIcon: 'star-solid',\r\n    text: 'text',\r\n    badge: '11',\r\n    subItems: undefined,\r\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "ListItemModel",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "currentIconFill",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 22
+                },
+                {
+                    "name": "hoverColor",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 23
+                },
+                {
+                    "name": "icon",
+                    "defaultValue": "'star'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "HeroIconName",
+                    "optional": false,
+                    "description": "",
+                    "line": 21
+                },
+                {
+                    "name": "iconColor",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 24
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 33,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "toggleIconState",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 28,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\r\nimport { HeroIconName } from 'ng-heroicons';\r\nimport { ListItemModel } from '../sidebar-item.model';\r\n\r\n@Component({\r\n  selector: 'app-sidebar-group-item',\r\n  templateUrl: './sidebar-group-item.component.html',\r\n  styleUrls: ['./sidebar-group-item.component.scss'],\r\n})\r\nexport class SidebarGroupItemComponent implements OnInit {\r\n  @Input() listItem: ListItemModel = {\r\n    id: 'uiui1324sdfiui13uiqweiu',\r\n    color: '',\r\n    shade: '',\r\n    icon: 'star',\r\n    fillIcon: 'star-solid',\r\n    text: 'text',\r\n    badge: '11',\r\n    subItems: undefined,\r\n  };\r\n  icon: HeroIconName = 'star';\r\n  currentIconFill = false;\r\n  hoverColor: string = '';\r\n  iconColor: string = '';\r\n  constructor() {\r\n    this.iconColor = 'text-' + this.listItem.color + '-' + this.listItem.shade;\r\n  }\r\n  toggleIconState() {\r\n    if (this.currentIconFill) this.icon = this.listItem.icon;\r\n    else this.icon = this.listItem.fillIcon;\r\n    this.currentIconFill = !this.currentIconFill;\r\n  }\r\n  ngOnInit(): void {\r\n    this.iconColor = 'text-' + this.listItem.color + '-' + this.listItem.shade;\r\n    this.icon = this.listItem.icon;\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./sidebar-group-item.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 24
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div\r\n  class=\"\r\n    flex\r\n    justify-between\r\n    items-center\r\n    cursor-pointer\r\n    hover:bg-opacity-20 hover:bg-gray-400\r\n  \"\r\n  (mouseover)=\"toggleIconState()\"\r\n  (mouseout)=\"toggleIconState()\"\r\n  [ngClass]=\"hoverColor\"\r\n>\r\n  <div class=\"flex justify-start items-center\">\r\n    <hero-icon\r\n      class=\"ml-8 mr-4\"\r\n      [ngClass]=\"iconColor\"\r\n      [name]=\"icon\"\r\n      size=\"24px\"\r\n    ></hero-icon>\r\n\r\n    <li class=\"p-2\">\r\n      <ng-content></ng-content>\r\n    </li>\r\n  </div>\r\n  <p class=\"mr-2 text-gray-500\">{{ listItem.badge }}</p>\r\n</div>\r\n"
+        },
+        {
+            "name": "SidebarItemComponent",
+            "id": "component-SidebarItemComponent-0e3e05cab0bc9c921921833670dac5ad210ca273063f4c5a95a9c621bfc264c2068a8d3a2b30676b46001701e1c4de4b10aa2d35e71b67d049fe16ef83724f86",
+            "file": "src/app/shared/sidebar/sidebar-item/sidebar-item.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-sidebar-item",
+            "styleUrls": [
+                "./sidebar-item.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./sidebar-item.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "listItem",
+                    "defaultValue": "{\r\n    id: 'uiui1324sdfiui13ui2342u',\r\n    color: '',\r\n    shade: '',\r\n    icon: 'star',\r\n    fillIcon: 'star-solid',\r\n    text: 'text',\r\n    badge: '11',\r\n    subItems: undefined,\r\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 36,
+                    "type": "ListItemModel",
+                    "decorators": []
+                },
+                {
+                    "name": "selected",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 35,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "currentIconFill",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 48
+                },
+                {
+                    "name": "hoverColor",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 49
+                },
+                {
+                    "name": "icon",
+                    "defaultValue": "'star'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "HeroIconName",
+                    "optional": false,
+                    "description": "",
+                    "line": 47
+                },
+                {
+                    "name": "iconColor",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 50
+                },
+                {
+                    "name": "selectedColor",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 51
+                },
+                {
+                    "name": "subscription",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Subscription",
+                    "optional": false,
+                    "description": "",
+                    "line": 46
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnDestroy",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 72,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 65,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "selectChange",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 69,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "toggleIconState",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 60,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { transition, trigger, useAnimation } from '@angular/animations';\r\nimport {\r\n  Component,\r\n  Input,\r\n  OnChanges,\r\n  OnDestroy,\r\n  OnInit,\r\n  SimpleChanges,\r\n} from '@angular/core';\r\nimport { HeroIconName } from 'ng-heroicons';\r\nimport { Subscription } from 'rxjs';\r\nimport { transitionAnimation } from 'src/app/core/animations/swipe-right-insert-remove.animation';\r\nimport { ListItemModel } from '../sidebar-item.model';\r\nimport { SidebarService } from '../sidebar.service';\r\n\r\n@Component({\r\n  selector: 'app-sidebar-item',\r\n  templateUrl: './sidebar-item.component.html',\r\n  styleUrls: ['./sidebar-item.component.scss'],\r\n  animations: [\r\n    trigger('myInsertRemoveTrigger', [\r\n      transition(':enter', [\r\n        useAnimation(transitionAnimation, {\r\n          params: {\r\n            initialTransformState: 'translate(-350px, 0px)',\r\n            duration: '200ms',\r\n            finalTransformState: 'translate(0px, 0px)',\r\n          },\r\n        }),\r\n      ]),\r\n    ]),\r\n  ],\r\n})\r\nexport class SidebarItemComponent implements OnInit, OnDestroy {\r\n  @Input() selected: boolean = false;\r\n  @Input() listItem: ListItemModel = {\r\n    id: 'uiui1324sdfiui13ui2342u',\r\n    color: '',\r\n    shade: '',\r\n    icon: 'star',\r\n    fillIcon: 'star-solid',\r\n    text: 'text',\r\n    badge: '11',\r\n    subItems: undefined,\r\n  };\r\n  subscription: Subscription;\r\n  icon: HeroIconName = 'star';\r\n  currentIconFill = false;\r\n  hoverColor: string = '';\r\n  iconColor: string = '';\r\n  selectedColor: string = '';\r\n  constructor(private sidebarService: SidebarService) {\r\n    this.iconColor = 'text-' + this.listItem.color + '-' + this.listItem.shade;\r\n    this.selectedColor = 'border-' + this.listItem.color + '-400';\r\n    this.subscription = sidebarService.currentSelectedItem.subscribe((id) => {\r\n      this.selected = id === this.listItem.id;\r\n    });\r\n  }\r\n\r\n  toggleIconState() {\r\n    if (this.currentIconFill) this.icon = this.listItem.icon;\r\n    else this.icon = this.listItem.fillIcon;\r\n    this.currentIconFill = !this.currentIconFill;\r\n  }\r\n  ngOnInit(): void {\r\n    this.iconColor = 'text-' + this.listItem.color + '-' + this.listItem.shade;\r\n    this.icon = this.listItem.icon;\r\n  }\r\n  selectChange() {\r\n    this.sidebarService.changeSelectedIndex(this.listItem.id);\r\n  }\r\n  ngOnDestroy(): void {\r\n    this.subscription.unsubscribe();\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".item-selected {\r\n  border-left: 5px solid;\r\n}\r\n",
+                    "styleUrl": "./sidebar-item.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "sidebarService",
+                        "type": "SidebarService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 51,
+                "jsdoctags": [
+                    {
+                        "name": "sidebarService",
+                        "type": "SidebarService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit",
+                "OnDestroy"
+            ],
+            "templateData": "<div\r\n  class=\"\r\n    flex\r\n    justify-between\r\n    items-center\r\n    cursor-pointer\r\n    hover:bg-opacity-20 hover:bg-gray-400\r\n    transition-all\r\n    duration-500\r\n  \"\r\n  @myInsertRemoveTrigger\r\n  (mouseover)=\"toggleIconState()\"\r\n  (mouseout)=\"toggleIconState()\"\r\n  (click)=\"selectChange()\"\r\n  [ngClass]=\"{ hoverColor: true, 'item-selected': selected }\"\r\n>\r\n  <div class=\"flex justify-start items-center\">\r\n    <hero-icon\r\n      class=\"ml-8 mr-4\"\r\n      [ngClass]=\"iconColor\"\r\n      [name]=\"icon\"\r\n      size=\"24px\"\r\n    ></hero-icon>\r\n\r\n    <li class=\"p-2\">\r\n      <ng-content></ng-content>\r\n    </li>\r\n  </div>\r\n  <p class=\"mr-2 text-gray-500\">{{ listItem.badge }}</p>\r\n</div>\r\n"
+        },
+        {
+            "name": "SidebarSearchBarComponent",
+            "id": "component-SidebarSearchBarComponent-0843bf71ec789b5d39e80982faf70fe0909b35d5d4c4c0603fb4ca5fb95d49e644005bff46ac8670e35ed4ee03ca15ac4d719301db08f344936f3a833b7b33cf",
+            "file": "src/app/shared/sidebar/sidebar-search-bar/sidebar-search-bar.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-sidebar-search-bar",
+            "styleUrls": [
+                "./sidebar-search-bar.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./sidebar-search-bar.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "optionsContent",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string[]",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "inputText",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "options",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "addNewList",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 20,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "changeOptions",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 15,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\r\nimport { SidebarService } from '../sidebar.service';\r\n\r\n@Component({\r\n  selector: 'app-sidebar-search-bar',\r\n  templateUrl: './sidebar-search-bar.component.html',\r\n  styleUrls: ['./sidebar-search-bar.component.scss'],\r\n})\r\nexport class SidebarSearchBarComponent implements OnInit {\r\n  options: boolean = false;\r\n  inputText: string = '';\r\n  @Input() optionsContent: string[] = [];\r\n  constructor(private sidebarService: SidebarService) {}\r\n\r\n  ngOnInit(): void {}\r\n\r\n  changeOptions() {\r\n    this.options = !this.options;\r\n  }\r\n  addNewList() {\r\n    this.sidebarService.addUserList(this.inputText);\r\n    this.inputText = '';\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./sidebar-search-bar.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "sidebarService",
+                        "type": "SidebarService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 12,
+                "jsdoctags": [
+                    {
+                        "name": "sidebarService",
+                        "type": "SidebarService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"flex justify-start items-center\">\r\n  <hero-icon class=\"mx-2\" name=\"document-add\" size=\"24px\"></hero-icon>\r\n\r\n  <input\r\n    type=\"text\"\r\n    placeholder=\"New List\"\r\n    (keydown.enter)=\"addNewList()\"\r\n    [(ngModel)]=\"inputText\"\r\n    class=\"bg-transparent py-2 w-full flex-1 outline-none\"\r\n  />\r\n\r\n  <div *ngIf=\"options\" class=\"relative z-30 w-40 shadow-md transition\">\r\n    <ul\r\n      class=\"\r\n        absolute\r\n        -top-20\r\n        h-20\r\n        w-full\r\n        border-0\r\n        bg-green-200\r\n        dark:bg-gray-700\r\n        py-1\r\n        overflow-y-auto\r\n        rounded\r\n      \"\r\n    >\r\n      <li\r\n        class=\"\r\n          hover:bg-green-400\r\n          dark:hover:bg-gray-800\r\n          transition-all\r\n          duration-500\r\n          cursor-pointer\r\n          px-4\r\n        \"\r\n        *ngFor=\"let option of optionsContent\"\r\n      >\r\n        {{ option }}\r\n      </li>\r\n    </ul>\r\n  </div>\r\n\r\n  <hero-icon\r\n    class=\"mx-2 cursor-pointer\"\r\n    (click)=\"changeOptions()\"\r\n    name=\"dots-vertical\"\r\n    size=\"24px\"\r\n  ></hero-icon>\r\n</div>\r\n"
+        },
+        {
+            "name": "TextAreaComponent",
+            "id": "component-TextAreaComponent-ff65112eea341b08a6e16263b8468e11e67e5a51ed7af7e4ad10404205018c03a11ad444db6883e60030519183352f4f4a585ecefe059cd7b4b0f43db5a69a29",
+            "file": "src/app/core/components/text-area/text-area.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-text-area",
+            "styleUrls": [
+                "./text-area.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./text-area.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-text-area',\n  templateUrl: './text-area.component.html',\n  styleUrls: ['./text-area.component.scss']\n})\nexport class TextAreaComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./text-area.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<textarea\n  class=\"bg-transparent w-full outline-none p-2\"\n  name=\"\"\n  id=\"\"\n  placeholder=\"Add Note\"\n  cols=\"30\"\n  rows=\"2\"\n></textarea>\n"
+        },
+        {
+            "name": "TextFieldComponent",
+            "id": "component-TextFieldComponent-d99c9dfeff45f1551fbe372b560095e953d68a2b15714c8ec2a0248747aaf1b36f1db641326ae828511d8dfbb506bac8c9344d3ce0831726127906efd12df92e",
+            "file": "src/app/core/components/text-field/text-field.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-text-field",
+            "styleUrls": [
+                "./text-field.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./text-field.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-text-field',\n  templateUrl: './text-field.component.html',\n  styleUrls: ['./text-field.component.scss']\n})\nexport class TextFieldComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./text-field.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"flex justify-between items-center my-2\">\n    <hero-icon\n      class=\"mx-2 cursor-pointer align-middle opacity-40\"\n      name=\"plus\"\n      size=\"24px\"\n    ></hero-icon>\n    <input\n      placeholder=\"New Sub Item\"\n      class=\"p-1 w-full bg-transparent px-4 outline-none\"\n      type=\"text\"\n    />\n  </div>"
+        },
+        {
+            "name": "TitlePaneComponent",
+            "id": "component-TitlePaneComponent-40bf2a335d31bc33f2713b51265cf20095ae40ee076e2dbda5a55c5d2e4542b2d84da75a0fa86a17e54dccb0dc475a986d563f50e698427826e8f70cb24e7613",
+            "file": "src/app/modules/task/components/title-pane/title-pane.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-title-pane",
+            "styleUrls": [
+                "./title-pane.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./title-pane.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-title-pane',\r\n  templateUrl: './title-pane.component.html',\r\n  styleUrls: ['./title-pane.component.scss']\r\n})\r\nexport class TitlePaneComponent implements OnInit {\r\n\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./title-pane.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"p-2 sticky top-0 block z-10 bg-green-100 dark:bg-gray-900\">\r\n  <h1 class=\"pl-8 text-3xl opacity-70\">List Name</h1>\r\n</div>\r\n"
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-d9bf5206d59c6e760af41f3ada96655839cea47b9e65c88b2eb6ef5865dfecc8646f3696ebd82e1ff4389efc440617ba825341498707a13f9d7483e9b13e98f1",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { CoreModule } from './core/core.module';\r\nimport { TaskModule } from './modules/task/task.module';\r\nimport { SharedModule } from './shared/shared.module';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule,\r\n    SharedModule,\r\n    TaskModule,\r\n    CoreModule,\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent],\r\n})\r\nexport class AppModule {}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AppRoutingModule"
+                        },
+                        {
+                            "name": "CoreModule"
+                        },
+                        {
+                            "name": "SharedModule"
+                        },
+                        {
+                            "name": "TaskModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppRoutingModule",
+            "id": "module-AppRoutingModule-4518c33195180c88b148f5ad346bbd509e37db201ff0191c9bd5d00989bc674a7e8476b2298b5f61b74b4fa3379b6d71a3615e2cc472074cf6e416b23941131b",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "CoreModule",
+            "id": "module-CoreModule-802989cc22946a4632c66f0853c7f34bb493f9b4f92558df3db9837501b27a42ceee64dfefe3eaaae6e9036eba56a8a6a52f206a25f9c4bc0f7558886fe9a1ad",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/core/core.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport {\r\n  star,\r\n  starSolid,\r\n  checkCircle,\r\n  checkCircleSolid,\r\n  HeroIconsModule,\r\n} from 'ng-heroicons';\r\nimport { DividerComponent } from './components/divider/divider.component';\r\nimport { ListItemComponent } from './components/list-item/list-item.component';\r\nimport { DropDownMenuComponent } from './components/drop-down-menu/drop-down-menu.component';\r\nimport { CardComponent } from './components/card/card.component';\r\nimport { ButtonComponent } from './components/button/button.component';\r\nimport { TextFieldComponent } from './components/text-field/text-field.component';\r\nimport { TextAreaComponent } from './components/text-area/text-area.component';\r\nimport { LabelComponent } from './components/label/label.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    DividerComponent,\r\n    ListItemComponent,\r\n    DropDownMenuComponent,\r\n    CardComponent,\r\n    ButtonComponent,\r\n    TextFieldComponent,\r\n    TextAreaComponent,\r\n    LabelComponent,\r\n  ],\r\n  imports: [\r\n    CommonModule,\r\n    HeroIconsModule.withIcons({\r\n      star,\r\n      starSolid,\r\n      checkCircle,\r\n      checkCircleSolid,\r\n    }),\r\n  ],\r\n  exports: [\r\n    DividerComponent,\r\n    ListItemComponent,\r\n    DropDownMenuComponent,\r\n    CardComponent,\r\n    ButtonComponent,\r\n    TextFieldComponent,\r\n    TextAreaComponent,\r\n    LabelComponent,\r\n  ],\r\n})\r\nexport class CoreModule {}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "ButtonComponent"
+                        },
+                        {
+                            "name": "CardComponent"
+                        },
+                        {
+                            "name": "DividerComponent"
+                        },
+                        {
+                            "name": "DropDownMenuComponent"
+                        },
+                        {
+                            "name": "LabelComponent"
+                        },
+                        {
+                            "name": "ListItemComponent"
+                        },
+                        {
+                            "name": "TextAreaComponent"
+                        },
+                        {
+                            "name": "TextFieldComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "CardComponent"
+                        },
+                        {
+                            "name": "DividerComponent"
+                        },
+                        {
+                            "name": "DropDownMenuComponent"
+                        },
+                        {
+                            "name": "LabelComponent"
+                        },
+                        {
+                            "name": "ListItemComponent"
+                        },
+                        {
+                            "name": "TextAreaComponent"
+                        },
+                        {
+                            "name": "TextFieldComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "SharedModule",
+            "id": "module-SharedModule-b5bf41376a7636c97abe2c9776a81e490478e8e80ef9c07ff3b4f4c604c17feaf22ef52137c49d35568682040de7a711df648d33c1feadd8c8c103832daf3c6c",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/shared/shared.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { SidebarComponent } from './sidebar/sidebar.component';\r\nimport { SidebarItemComponent } from './sidebar/sidebar-item/sidebar-item.component';\r\nimport { HeroComponent } from './hero/hero.component';\r\nimport { CoreModule } from '../core/core.module';\r\nimport {\r\n  HeroIconsModule,\r\n  star,\r\n  sunSolid,\r\n  sun,\r\n  calendar,\r\n  calendarSolid,\r\n  user,\r\n  userSolid,\r\n  home,\r\n  homeSolid,\r\n  viewList,\r\n  viewListSolid,\r\n  documentAdd,\r\n  documentAddSolid,\r\n  dotsVertical,\r\n  dotsVerticalSolid,\r\n  collection,\r\n  collectionSolid,\r\n  plus,\r\n  plusSolid,\r\n  userAdd,\r\n  userAddSolid,\r\n} from 'ng-heroicons';\r\nimport { SidebarService } from './sidebar/sidebar.service';\r\nimport { SidebarCollapsableItemComponent } from './sidebar/sidebar-collapsable-item/sidebar-collapsable-item.component';\r\nimport { SidebarGroupItemComponent } from './sidebar/sidebar-group-item/sidebar-group-item.component';\r\nimport { SidebarSearchBarComponent } from './sidebar/sidebar-search-bar/sidebar-search-bar.component';\r\nimport { FormsModule } from '@angular/forms';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    SidebarComponent,\r\n    SidebarItemComponent,\r\n    HeroComponent,\r\n    SidebarCollapsableItemComponent,\r\n    SidebarGroupItemComponent,\r\n    SidebarSearchBarComponent,\r\n  ],\r\n  imports: [\r\n    CommonModule,\r\n    CoreModule,\r\n    FormsModule,\r\n    HeroIconsModule.withIcons({\r\n      star,\r\n      sun,\r\n      sunSolid,\r\n      calendar,\r\n      calendarSolid,\r\n      user,\r\n      userSolid,\r\n      home,\r\n      homeSolid,\r\n      viewList,\r\n      viewListSolid,\r\n      documentAdd,\r\n      documentAddSolid,\r\n      dotsVertical,\r\n      dotsVerticalSolid,\r\n      collection,\r\n      collectionSolid,\r\n      plus,\r\n      plusSolid,\r\n      userAdd,\r\n      userAddSolid,\r\n    }),\r\n  ],\r\n  exports: [SidebarComponent],\r\n  providers: [SidebarService],\r\n})\r\nexport class SharedModule {}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": [
+                        {
+                            "name": "SidebarService"
+                        }
+                    ]
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "HeroComponent"
+                        },
+                        {
+                            "name": "SidebarCollapsableItemComponent"
+                        },
+                        {
+                            "name": "SidebarComponent"
+                        },
+                        {
+                            "name": "SidebarGroupItemComponent"
+                        },
+                        {
+                            "name": "SidebarItemComponent"
+                        },
+                        {
+                            "name": "SidebarSearchBarComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "CoreModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "SidebarComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "TaskModule",
+            "id": "module-TaskModule-b3ba0934092ae403997b740054469769bf5414d2473f1f8254c77d28549c32812947c7f9b2d56250125355d2f31e659aa0c466665803b9baa1fdb5faeb17ee90",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/modules/task/task.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { ContentPaneComponent } from './components/content-pane/content-pane.component';\r\nimport { annotation, HeroIconsModule } from 'ng-heroicons';\r\nimport { CoreModule } from 'src/app/core/core.module';\r\nimport { ItemDetailsPaneComponent } from './components/item-details-pane/item-details-pane.component';\r\nimport { TitlePaneComponent } from './components/title-pane/title-pane.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    ContentPaneComponent,\r\n    ItemDetailsPaneComponent,\r\n    TitlePaneComponent,\r\n  ],\r\n  imports: [\r\n    CommonModule,\r\n    HeroIconsModule.withIcons({ annotation }),\r\n    CoreModule,\r\n  ],\r\n  exports: [ContentPaneComponent, ItemDetailsPaneComponent, TitlePaneComponent],\r\n})\r\nexport class TaskModule {}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "ContentPaneComponent"
+                        },
+                        {
+                            "name": "ItemDetailsPaneComponent"
+                        },
+                        {
+                            "name": "TitlePaneComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "CoreModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "ContentPaneComponent"
+                        },
+                        {
+                            "name": "ItemDetailsPaneComponent"
+                        },
+                        {
+                            "name": "TitlePaneComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "context",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: false\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: true\r\n}"
+            },
+            {
+                "name": "Large",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "LoggedIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "LoggedIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "LoggedOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "LoggedOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "literal type"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Small",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Button>",
+                "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Header>",
+                "defaultValue": "(args: Header) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Page>",
+                "defaultValue": "(args: Page) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "transitionAnimation",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/core/animations/swipe-right-insert-remove.animation.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "animation([\r\n  style({ transform: '{{initialTransformState}}' }),\r\n  animate('{{duration}}', style({ transform: '{{finalTransformState}}' })),\r\n])"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: false\r\n}"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: true\r\n}"
+                }
+            ],
+            "src/stories/Button.stories.ts": [
+                {
+                    "name": "Large",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Small",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Button>",
+                    "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/Header.stories.ts": [
+                {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "LoggedOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Header>",
+                    "defaultValue": "(args: Header) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/Page.stories.ts": [
+                {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "LoggedOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Page>",
+                    "defaultValue": "(args: Page) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/app/core/animations/swipe-right-insert-remove.animation.ts": [
+                {
+                    "name": "transitionAnimation",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/core/animations/swipe-right-insert-remove.animation.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "animation([\r\n  style({ transform: '{{initialTransformState}}' }),\r\n  animate('{{duration}}', style({ transform: '{{finalTransformState}}' })),\r\n])"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "className": "AppModule",
+        "children": [
+            {
+                "name": "routes",
+                "filename": "src/app/app-routing.module.ts",
+                "module": "AppRoutingModule",
+                "children": [],
+                "kind": "module"
+            }
+        ]
+    },
+    "coverage": {
+        "count": 2,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/core/animations/swipe-right-insert-remove.animation.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "transitionAnimation",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/core/components/button/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/core/components/card/card.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CardComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/core/components/divider/divider.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DividerComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/core/components/drop-down-menu/drop-down-menu.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DropDownMenuComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/core/components/label/label.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "LabelComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/core/components/list-item/list-item.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ListItemComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/core/components/text-area/text-area.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TextAreaComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/core/components/text-field/text-field.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TextFieldComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/task/components/content-pane/content-pane.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ContentPaneComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/task/components/item-details-pane/item-details-pane.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ItemDetailsPaneComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/task/components/title-pane/title-pane.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TitlePaneComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/hero/hero.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HeroComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/sidebar/sidebar-collapsable-item/sidebar-collapsable-item.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SidebarCollapsableItemComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/sidebar/sidebar-group-item/sidebar-group-item.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SidebarGroupItemComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/sidebar/sidebar-item.model.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ListItemModel",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/sidebar/sidebar-item/sidebar-item.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SidebarItemComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/14",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/sidebar/sidebar-search-bar/sidebar-search-bar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SidebarSearchBarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/sidebar/sidebar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SidebarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/sidebar/sidebar.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "SidebarService",
+                "coveragePercent": 0,
+                "coverageCount": "0/15",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.prod.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Large",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedIn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedOut",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedIn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedOut",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/User.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "User",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 83,
+                "coverageCount": "5/6",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/stories/header.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HeaderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/page.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PageComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "context",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "require",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}
